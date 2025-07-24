@@ -1,0 +1,15 @@
+.appContainer {
+  min-height: 100vh;
+  width: 100%;
+  /* display: flex;  Eliminado para permitir sticky */
+  flex-direction: column;
+  align-items: center;
+}
+
+.mainContent {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+}

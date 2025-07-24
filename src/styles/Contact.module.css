@@ -1,0 +1,136 @@
+/* ===== MAIN SECTION ===== */
+.contactSection {
+  padding: 0 2rem 4rem 2rem;
+  margin: 0 auto;
+  max-width: 900px;
+  width: 100%;
+  color: var(--primary-text-color);
+  background: none;
+}
+
+/* ===== TITLE ===== */
+.title {
+  font-size: var(--font-size-title, 2.8rem);
+  text-align: center;
+  font-weight: var(--font-weight-bold);
+  color: var(--primary-text-color);
+}
+
+/* ===== INFO TEXT ===== */
+.infoText {
+  font-size: var(--font-size, 1.7rem);
+  line-height: 1.6;
+  color: var(--secondary-text-color);
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3rem;
+}
+
+/* ===== SOCIAL MEDIA CONTAINER ===== */
+.contactCardsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin: 3rem auto;
+}
+
+/* ===== SOCIAL MEDIA ICON ===== */
+.contactCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contactCardLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--secondary-text-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contactCardLink:hover {
+  color: var(--accent-color);
+  transform: translateY(-3px);
+}
+
+.contactIcon {
+  font-size: 3rem;
+  transition: transform 0.3s;
+  margin-bottom: 1rem;
+}
+
+.contactCardLink:hover .contactIcon {
+  transform: scale(1.1);
+}
+
+.contactValue {
+  font-size: 1.4rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+/* ===== CLOSING MESSAGE ===== */
+.contactMessage {
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--secondary-text-color);
+  margin-top: 3rem;
+  font-style: italic;
+}
+
+/* ===== ERROR MESSAGES ===== */
+.error {
+  color: #ff4d4f;
+  font-size: 1.4rem;
+  margin-top: 0.5rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.error::before {
+  content: "⚠️";
+  margin-right: 0.5rem;
+  font-size: 1.4rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 768px) {
+  .contactCardsContainer {
+    gap: 3rem;
+  }
+  
+  .contactIcon {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contactCardsContainer {
+    gap: 2rem;
+  }
+  
+  .contactIcon {
+    font-size: 2.2rem;
+  }
+  
+  .contactValue {
+    font-size: 1.2rem;
+  }
+}

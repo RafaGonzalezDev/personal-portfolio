@@ -1,0 +1,104 @@
+/* ===== LAYOUT ===== */
+.layoutContainer {
+  display: block; /* Changed from flex to block to allow sticky */
+  min-height: 100vh;
+  background-repeat: repeat;
+  background-size: 20px 20px;
+  padding-top: 12rem; /* Añadido para compensar el navbar fijo */
+}
+
+@media (max-width: 768px) {
+  .layoutContainer {
+    padding-top: 8rem; /* Ajustado para pantallas más pequeñas */
+  }
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  margin-top: auto;
+  padding: 3rem 2rem;
+  text-align: center;
+  color: var(--primary-text-color);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ===== FOOTER CONTENT ===== */
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* ===== LOGO ===== */
+.footerLogo {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  padding: 0.8rem 1rem;
+  border: 2px solid var(--accent-color);
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(var(--accent-color-rgb), 0.1), transparent);
+  box-shadow: 0 4px 15px rgba(var(--accent-color-rgb), 0.2);
+  transition: all 0.3s ease;
+}
+
+.footerLogo:hover {
+  transform: rotate(10deg) scale(1.05);
+  box-shadow: 0 6px 20px rgba(var(--accent-color-rgb), 0.3);
+}
+
+/* ===== TEXT ===== */
+.footerText {
+  flex: 1;
+  text-align: center;
+}
+
+.footerTagline {
+  font-size: 1.4rem;
+  color: var(--secondary-text-color);
+  margin-bottom: 0.6rem;
+  font-weight: 300;
+}
+
+.footerCopyright {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+/* ===== LINKS ===== */
+.footerLinks {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footerLinks a {
+  color: var(--secondary-text-color);
+  font-size: 1.8rem;
+  transition: all 0.3s ease;
+}
+
+.footerLinks a:hover {
+  color: var(--accent-color);
+  transform: translateY(-3px);
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 768px) {
+  .footerContent {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footerText {
+    margin: 1rem 0;
+  }
+}

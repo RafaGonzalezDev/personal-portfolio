@@ -1,0 +1,96 @@
+/* ===== LAYOUT ===== */
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 2rem;
+  flex-wrap: wrap;
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+/* ===== PROFILE IMAGE ===== */
+.profileImage {
+  width: 100%;
+  min-width: 650px;
+  height: auto;
+  border-radius: 50%;
+  margin: 0 auto;
+  z-index: 999;
+}
+
+/* ===== TYPOGRAPHY ===== */
+.title {
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--primary-text-color);
+}
+
+.subtitle {
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--secondary-text-color);
+  margin: 0;
+}
+
+/* ===== CONTENT CONTAINERS ===== */
+.leftContainer {
+  flex: 1;
+  min-width: 0;
+}
+
+.rightContainer {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* ===== DESCRIPTION ===== */
+.description {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin-top: 1.5rem;
+  color: var(--secondary-text-color);
+}
+
+/* ===== TECH STACK ===== */
+.techStackSection {
+  width: 100%;
+  margin-top: 3rem;
+}
+
+.techStackTitle {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--primary-text-color);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+  }
+  
+  .profileImage {
+    display: block;
+    min-width: 0;
+    width: 90%;
+    max-width: 350px;
+    margin-bottom: 2rem;
+  }
+  
+  .leftContainer, .rightContainer {
+    min-width: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}

@@ -1,0 +1,26 @@
+/* ===== CONTAINER ===== */
+.separatorContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 0;
+  width: 100%;
+}
+
+/* ===== LINE ===== */
+.line {
+  height: 2px;
+  width: 60%;
+  max-width: 1000px;
+  background: linear-gradient(to right, transparent, var(--accent-color), transparent);
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 768px) {
+  .separatorContainer {
+    padding: 1.5rem 0;
+  }
+  .line {
+    width: 80%;
+  }
+}
