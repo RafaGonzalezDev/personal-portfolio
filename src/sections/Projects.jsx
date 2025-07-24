@@ -2,7 +2,7 @@ import React from 'react';
 import styles from '../styles/Projects.module.css';
 import { PROJECTS } from '../constants';
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = React.memo(({ project }) => {
   return (
     <div className={styles.projectCard}>
       <div className={styles.projectContent}>
@@ -29,7 +29,9 @@ const ProjectCard = ({ project }) => {
       </div>
     </div>
   );
-};
+});
+
+ProjectCard.displayName = 'ProjectCard';
 
 const Projects = () => {
   return (

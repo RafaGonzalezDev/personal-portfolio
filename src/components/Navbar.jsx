@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import styles from '../styles/Navbar.module.css';
 import { NAVBAR_ITEMS } from '../constants';
 
@@ -22,13 +22,21 @@ import { NAVBAR_ITEMS } from '../constants';
  */
 const Navbar = () => {
   const [activeItem, setActiveItem] = useState('home');
+  const sectionRefs = useRef({});
+  
+  // Inicializar refs
+  useEffect(() => {
+    NAVBAR_ITEMS.forEach(item => {
+      sectionRefs.current[item.id] = document.getElementById(item.id);
+    });
+  }, []);
 
   const handleClick = (id) => {
     setActiveItem(id);
     if (id === 'home') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
-      const section = document.getElementById(id);
+      const section = sectionRefs.current[id];
       if (section) {
         section.scrollIntoView({ behavior: 'smooth' });
       }

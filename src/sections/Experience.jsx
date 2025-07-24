@@ -1,24 +1,7 @@
 import React from 'react';
 import styles from '../styles/Experience.module.css';
 import { EXPERIENCES } from '../constants';
-
-/**
- * Función utilitaria para parsear texto con formato markdown
- * Convierte **texto** en elementos <strong>texto</strong>
- * 
- * @param {string} text - Texto con formato markdown
- * @returns {Array} Array de elementos React con formato aplicado
- */
-function parseHighlight(text) {
-  // Divide el texto en partes, manteniendo los **...**
-  const parts = text.split(/(\*\*[^*]+\*\*)/g);
-  return parts.map((part, i) => {
-    if (/^\*\*[^*]+\*\*$/.test(part)) {
-      return <strong key={i}>{part.replace(/\*\*/g, '')}</strong>;
-    }
-    return part;
-  });
-}
+import { parseHighlight } from '../utils/index.jsx';
 
 /**
  * Función utilitaria para formatear descripciones de experiencia
