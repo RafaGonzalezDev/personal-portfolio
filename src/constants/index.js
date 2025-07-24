@@ -2,7 +2,7 @@
 export const PROFESSIONAL_SUMMARY = {
   title: 'Software Developer',
   name: 'Rafa González Rubio',
-  description: `Software engineer specialized in **Angular**, global state optimization with **NgRx**, and **scalable architecture**. **Technical leadership** and commitment to quality standards, multifunctional collaboration, and continuous improvement. Consolidated experience in **large-scale projects** and **high availability**, focused on continuous improvement and business value optimization.`
+  description: `Software engineer specialized in **Angular**, global state optimization with **NgRx**, and **scalable architecture**. **Technical leadership** and commitment to quality standards, multifunctional collaboration, and continuous improvement. Consolidated experience in **large-scale projects** and **high availability**, focused on continuous improvement and business value optimization.`,
 };
 
 // Constantes para la navegación
@@ -64,6 +64,19 @@ Technologies: JavaScript, TypeScript, React, PHP, Laravel, Java, SQL, NoSQL, HTM
 export const PROJECTS = [
   {
     id: 1,
+    title: 'YouTube Transcript CLI',
+    description: 'CLI tool to download YouTube video transcripts in Markdown format. It extracts video IDs, downloads transcripts in specified languages, and saves them to .md files.',
+    technologies: ['Python', 'youtube-transcript-api'],
+    image: '',
+    githubUrl: 'https://github.com/RafaGonzalezDev/youtube-transcript-cli',
+    liveUrl: '',
+    featured: true,
+    year: '2024',
+    category: 'CLI Tool',
+    highlights: ['Extracts YouTube video ID from any URL format', 'Downloads transcript in the specified language', 'Formats transcript and saves it to a .md file'],
+  },
+  {
+    id: 2,
     title: 'HiLink',
     description:
       'Frontend design of a travel and adventure application implemented with CSS-in-JS. Best development practices were applied to create a modern and responsive user interface, making use of reusable components and a scalable architecture.',
@@ -77,7 +90,7 @@ export const PROJECTS = [
     highlights: ['Scalable micro frontend architecture', 'Advanced permissions system', 'Optimized document loading and search'],
   },
   {
-    id: 2,
+    id: 3,
     title: 'HooBank',
     description:
       'Frontend implementation of a modern banking platform using CSS-in-JS for component styling. The project was developed following web development best practices, with a focus on accessibility, performance, and fluid user experience.',
