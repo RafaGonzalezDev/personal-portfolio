@@ -2,7 +2,7 @@
 
 A modern personal portfolio built with React and Vite, showcasing professional experience, featured projects and technical skills.
 
-![Portfolio Preview](./public/portfolio.png)
+![Portfolio Preview](./public/preview.png)
 
 ## Features
 
