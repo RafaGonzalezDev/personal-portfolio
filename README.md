@@ -1,23 +1,25 @@
 # Personal Portfolio
 
-A modern personal portfolio built with React and Vite, showcasing my professional experience, featured projects and technical skills in an interactive and visually appealing way.
+A modern personal portfolio built with React and Vite, showcasing professional experience, featured projects and technical skills.
 
-## 🚀 Features
+![Portfolio Preview](./public/portfolio.png)
+
+## Features
 
 - **Responsive Design**: Optimized for all devices
-- **Smooth Animations**: AOS (Animate On Scroll) implementation for fluid transitions
-- **Modular Architecture**: Organized and maintainable code with CSS Modules
-- **Optimized Performance**: Built with Vite for fast loading
+- **Smooth Animations**: AOS implementation for fluid transitions
+- **Modular Architecture**: CSS Modules for maintainable code
+- **Optimized Performance**: Built with Vite
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Frontend**: React 19, JavaScript ES6+
 - **Bundler**: Vite 6.2
 - **Styling**: CSS Modules
 - **Animations**: AOS (Animate On Scroll)
-- **Linting**: ESLint with modern configuration
+- **Linting**: ESLint
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 src/
@@ -37,7 +39,7 @@ src/
 └── utils/          # Utility functions
 ```
 
-## 🚀 Installation & Usage
+## Installation & Usage
 
 ### Prerequisites
 - Node.js 20 or higher
@@ -68,38 +70,21 @@ npm run preview  # Build preview
 npm run lint     # Run ESLint
 ```
 
-## 🎨 Portfolio Sections
+## Portfolio Sections
 
 - **Home**: Personal introduction and main technologies
-- **Experience**: Detailed professional history
+- **Experience**: Professional history
 - **Projects**: Featured projects with GitHub links and demos
 - **Contact**: Contact information and social networks
 
-## 🔧 Configuration
+## Technical Features
 
-The project includes optimized configurations for:
-
-- **ESLint**: Modern rules for React and JavaScript
-- **Vite**: SWC configuration for Fast Refresh
-
-
-## 📱 Responsive Design
-
-The portfolio is fully optimized for:
-- Desktop (1200px+)
-- Tablet (768px - 1199px)
-- Mobile (320px - 767px)
-
-## 🌟 Technical Features
-
-- **CSS Modules**: Encapsulated and maintainable styles
-- **Lazy Loading**: Image loading optimization
+- **CSS Modules**: Encapsulated styles
+- **Responsive Design**: Desktop, tablet and mobile optimized
 - **SEO Friendly**: Meta tags and semantic structure
-- **Accessibility**: Complies with WCAG standards
+- **Accessibility**: WCAG compliant
 
-
-
-## 📄 License
+## License
 
 This project is for personal use. Feel free to use it as reference for your own portfolio.
 
