@@ -77,6 +77,25 @@ export const PROJECTS = [
   },
   {
     id: 2,
+    title: 'WCAG Design System',
+    description: 'A comprehensive color palette generator and accessibility testing tool designed to help developers and designers create WCAG 2.2 compliant color combinations for web applications.',
+    technologies: ['React', 'TypeScript', 'Shadcn/UI', 'Tailwind CSS', 'Vite'],
+    image: '',
+    githubUrl: 'https://github.com/RafaGonzalezDev/wcag_design',
+    liveUrl: '',
+    featured: true,
+    year: '2024',
+    category: 'Web Application',
+    highlights: [
+      'Real-time WCAG Validation with instant feedback on contrast ratios and compliance levels',
+      'Custom Color Creation with interactive color pickers and hex input support',
+      'Accessibility Scoring with visual progress indicators showing compliance percentage',
+      'Expert-Curated Collections of pre-defined palettes tested for WCAG 2.1 AA standards',
+      'Live Preview environment to see how colors perform with different text sizes and analyze detailed compliance reports',
+    ],
+  },
+  {
+    id: 3,
     title: 'HiLink',
     description:
       'Frontend design of a travel and adventure application implemented with CSS-in-JS. Best development practices were applied to create a modern and responsive user interface, making use of reusable components and a scalable architecture.',
@@ -90,7 +109,7 @@ export const PROJECTS = [
     highlights: ['Scalable micro frontend architecture', 'Advanced permissions system', 'Optimized document loading and search'],
   },
   {
-    id: 3,
+    id: 4,
     title: 'HooBank',
     description:
       'Frontend implementation of a modern banking platform using CSS-in-JS for component styling. The project was developed following web development best practices, with a focus on accessibility, performance, and fluid user experience.',
