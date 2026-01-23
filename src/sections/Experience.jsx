@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from '../styles/Experience.module.css';
-import { EXPERIENCES } from '../constants';
-import { parseHighlight } from '../utils/index.jsx';
+import styles from '@/styles/Experience.module.css';
+import { EXPERIENCES } from '@/constants';
+import { parseHighlight } from '@/utils';
 
 /**
  * Función utilitaria para formatear descripciones de experiencia

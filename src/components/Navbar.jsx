@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
-import styles from '../styles/Navbar.module.css';
-import { NAVBAR_ITEMS } from '../constants';
+import styles from '@/styles/Navbar.module.css';
+import { NAVBAR_ITEMS } from '@/constants';
 
 /**
  * Navbar - Componente de navegación principal

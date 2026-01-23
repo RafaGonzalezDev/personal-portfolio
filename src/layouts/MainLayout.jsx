@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import styles from "../styles/MainLayout.module.css";
-import Header from "../sections/Header";
+import styles from "@/styles/MainLayout.module.css";
+import Header from "@/components/Header";
 
 import AOS from "aos";
 import "aos/dist/aos.css";

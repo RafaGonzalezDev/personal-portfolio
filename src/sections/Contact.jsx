@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from '../styles/Contact.module.css';
-import { CONTACT_INFO } from '../constants';
+import styles from '@/styles/Contact.module.css';
+import { CONTACT_INFO } from '@/constants';
 
 const Contact = () => {
   return (

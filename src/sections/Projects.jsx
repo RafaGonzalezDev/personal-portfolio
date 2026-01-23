@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from '../styles/Projects.module.css';
-import { PROJECTS } from '../constants';
+import styles from '@/styles/Projects.module.css';
+import { PROJECTS } from '@/constants';
 
 const ProjectCard = React.memo(({ project }) => {
   return (

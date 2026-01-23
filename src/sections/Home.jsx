@@ -1,7 +1,7 @@
-import styles from '../styles/Home.module.css';
-import profileImage from '../assets/rafa.png';
-import { PROFESSIONAL_SUMMARY } from '../constants';
-import { parseHighlight } from '../utils/index.jsx';
+import styles from '@/styles/Home.module.css';
+import profileImage from '@/assets/rafa.png';
+import { PROFESSIONAL_SUMMARY } from '@/constants';
+import { parseHighlight } from '@/utils';
 
 /**
  * Home - Sección de presentación principal

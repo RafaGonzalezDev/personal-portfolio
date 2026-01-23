@@ -1,18 +1,18 @@
 import { useEffect } from 'react';
-import styles from './App.module.css';
+import styles from '@/App.module.css';
 
 // Importaciones organizadas por tipo
 // Layouts
-import MainLayout from './layouts/MainLayout';
+import MainLayout from '@/layouts/MainLayout';
 
 // Páginas/Secciones
-import Home from './sections/Home';
-import Experience from './sections/Experience';
-import Projects from './sections/Projects';
-import Contact from './sections/Contact';
+import Home from '@/sections/Home';
+import Experience from '@/sections/Experience';
+import Projects from '@/sections/Projects';
+import Contact from '@/sections/Contact';
 
 // Componentes
-import Separator from './components/Separator';
+import Separator from '@/components/Separator';
 
 function App() {
   useEffect(() => {
