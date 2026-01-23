@@ -1,0 +1,61 @@
+/* ThemeToggle.module.css */
+
+/* Botón flotante */
+.themeToggle {
+  /* Posicionamiento */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  
+  /* Tamaño y forma */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  
+  /* Estilos visuales */
+  background-color: var(--accent-color);
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  
+  /* Sombra */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  
+  /* Flex para centrar contenido */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Transición suave */
+  transition: all 0.2s ease;
+}
+
+/* Estados interactivos */
+.themeToggle:hover {
+  background-color: var(--accent-hover-color);
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.themeToggle:focus {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+.themeToggle:active {
+  transform: scale(0.95);
+}
+
+/* Icono SVG */
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+  transition: transform 0.2s ease;
+}
+
+/* Animación de rotación para el icono */
+.themeToggle:hover .icon {
+  transform: rotate(15deg);
+}

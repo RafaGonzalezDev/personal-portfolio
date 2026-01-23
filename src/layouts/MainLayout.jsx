@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import styles from "@/styles/MainLayout.module.css";
 import Header from "@/components/Header";
+import ThemeToggle from "@/components/ThemeToggle/ThemeToggle";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -37,6 +38,7 @@ const MainLayout = ({ children }) => {
     <div className={styles.layoutContainer}>
       <Header />
       {children}
+      <ThemeToggle />
       <footer className={styles.footer}>
         <div className={styles.footerContent}>
           <div className={styles.footerText}>
