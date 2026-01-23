@@ -32,22 +32,42 @@ html {
 
 :root {
   font-family: 'Inter', sans-serif;
+  
+  /* ===== TYPOGRAPHY ===== */
   --font-size: 1.6rem;
   --font-weight: 300;
   --font-weight-bold: 600;
+  --font-size-title: 2.8rem;
+  --font-size-company: 1.8rem;
+  --font-size-role: 1.6rem;
+  --font-size-text: 1.4rem;
+  --font-size-subtitle: 2rem;
+  --font-size-icon-large: 3rem;
+  --font-size-icon-medium: 1.8rem;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
 
+  /* ===== COLORS ===== */
   --primary-text-color: #ffffff;
   --secondary-text-color: #b0b3b8;
   --accent-color: #FBBF24; /* Restaurado al naranja original */
   --accent-hover-color: #E5A50A; /* Restaurado al naranja hover original */
   --accent-color-rgb: 251, 191, 36; /* Valor RGB para #FBBF24 */
-
   --text-color: #ffffff;
   --text-secondary-color: #b0b3b8;
+  --tag-text-color: #FBBF24; /* Restaurado al color naranja original */
+  --error-color: #ff4d4f;
+  --error-color-rgb: 255, 77, 79;
+
+  /* ===== RGB VARIABLES ===== */
+  --card-bg-color-rgb: 40, 44, 52;
+  --primary-text-color-rgb: 255, 255, 255;
+  --background-primary-rgb: 26, 30, 33;
+  --background-secondary-rgb: 30, 33, 38;
+
+  /* ===== BACKGROUNDS ===== */
   --card-bg-color: #282c34; /* Restaurado al color original */
   --tag-bg-color: #343a40; /* Restaurado al color original */
-  --tag-text-color: #FBBF24; /* Restaurado al color naranja original */
-
   --background-primary: #1a1e21; /* Restaurado al color original */
   --background-secondary: #1e2126; /* Restaurado al color original */
 }

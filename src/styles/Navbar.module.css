@@ -18,13 +18,13 @@
 .unorderedList {
   display: flex;
   align-items: center;
-  background-color: rgba(40, 44, 52, 0.15); /* Igual que .projectCard */
+  background-color: rgba(var(--card-bg-color-rgb), 0.15); /* Igual que .projectCard */
   border-radius: 5rem;
-  border: 1px solid rgba(255,255,255,0.07); /* Igual que .projectCard/.content */
+  border: 1px solid rgba(var(--primary-text-color-rgb), 0.07); /* Igual que .projectCard/.content */
   flex-direction: row;
   padding: 1.5rem 4rem;
   gap: 2.5rem;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15), inset 0 0 0 1px rgba(255,255,255,0.07); /* Igual que .projectCard */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15), inset 0 0 0 1px rgba(var(--primary-text-color-rgb), 0.07); /* Igual que .projectCard */
   pointer-events: auto;
   margin: 0 auto;
   max-width: fit-content;

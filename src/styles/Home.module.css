@@ -21,13 +21,13 @@
 
 /* ===== TYPOGRAPHY ===== */
 .title {
-  font-size: 3rem;
+  font-size: var(--font-size-icon-large);
   font-weight: 600;
   color: var(--primary-text-color);
 }
 
 .subtitle {
-  font-size: 2rem;
+  font-size: var(--font-size-subtitle);
   font-weight: 400;
   color: var(--secondary-text-color);
   margin: 0;
@@ -48,7 +48,7 @@
 
 /* ===== DESCRIPTION ===== */
 .description {
-  font-size: 1.6rem;
+  font-size: var(--font-size);
   line-height: 1.6;
   margin-top: 1.5rem;
   color: var(--secondary-text-color);
@@ -61,8 +61,8 @@
 }
 
 .techStackTitle {
-  font-size: 1.8rem;
-  font-weight: 500;
+  font-size: var(--font-size-icon-medium);
+  font-weight: var(--font-weight-medium);
   color: var(--primary-text-color);
   margin-bottom: 1rem;
   text-align: center;

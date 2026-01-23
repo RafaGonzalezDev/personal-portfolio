@@ -19,7 +19,7 @@
   padding: 3rem 2rem;
   text-align: center;
   color: var(--primary-text-color);
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(var(--primary-text-color-rgb), 0.05);
 }
 
 /* ===== FOOTER CONTENT ===== */
@@ -35,7 +35,7 @@
 
 /* ===== LOGO ===== */
 .footerLogo {
-  font-size: 2.4rem;
+  font-size: var(--font-size-subtitle);
   font-weight: 700;
   color: var(--accent-color);
   padding: 0.8rem 1rem;
@@ -63,15 +63,15 @@
 }
 
 .footerTagline {
-  font-size: 1.4rem;
+  font-size: var(--font-size-text);
   color: var(--secondary-text-color);
   margin-bottom: 0.6rem;
-  font-weight: 300;
+  font-weight: var(--font-weight);
 }
 
 .footerCopyright {
   font-size: 1.2rem;
-  font-weight: 400;
+  font-weight: var(--font-weight-regular);
 }
 
 /* ===== LINKS ===== */
@@ -82,7 +82,7 @@
 
 .footerLinks a {
   color: var(--secondary-text-color);
-  font-size: 1.8rem;
+  font-size: var(--font-size-icon-medium);
   transition: all 0.3s ease;
 }
 
