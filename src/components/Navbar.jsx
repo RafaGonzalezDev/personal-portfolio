@@ -26,9 +26,81 @@ const Navbar = () => {
   
   // Inicializar refs
   useEffect(() => {
-    NAVBAR_ITEMS.forEach(item => {
+    NAVBAR_ITEMS.forEach((item) => {
       sectionRefs.current[item.id] = document.getElementById(item.id);
     });
+  }, []);
+
+  useEffect(() => {
+    const sectionElements = NAVBAR_ITEMS
+      .map((item) => document.getElementById(item.id))
+      .filter(Boolean);
+
+    if (!sectionElements.length) {
+      return undefined;
+    }
+
+    let frameId = null;
+
+    const updateActiveSection = () => {
+      frameId = null;
+      const viewportPoint = window.innerHeight * 0.35;
+       let nextActiveId = null;
+       let found = false;
+
+       sectionElements.forEach((section) => {
+         const rect = section.getBoundingClientRect();
+         if (rect.top <= viewportPoint && rect.bottom >= viewportPoint) {
+           nextActiveId = section.id;
+           found = true;
+         }
+       });
+
+       if (!found) {
+         const lastSection = sectionElements[sectionElements.length - 1];
+         if (lastSection) {
+           const lastRect = lastSection.getBoundingClientRect();
+           if (lastRect.top <= viewportPoint) {
+             nextActiveId = lastSection.id;
+           }
+         }
+       }
+
+
+
+      if (window.scrollY <= 0) {
+        nextActiveId = sectionElements[0].id;
+      }
+
+      const scrollBottom = window.scrollY + window.innerHeight;
+      const pageHeight = document.documentElement.scrollHeight;
+      if (scrollBottom >= pageHeight - 50) {
+        nextActiveId = sectionElements[sectionElements.length - 1].id;
+      }
+
+       if (nextActiveId !== null) {
+         setActiveItem((prev) => (prev === nextActiveId ? prev : nextActiveId));
+       }
+    };
+
+    const handleScroll = () => {
+      if (frameId) {
+        return;
+      }
+      frameId = window.requestAnimationFrame(updateActiveSection);
+    };
+
+    updateActiveSection();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('resize', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleScroll);
+      if (frameId) {
+        window.cancelAnimationFrame(frameId);
+      }
+    };
   }, []);
 
   const handleClick = (id) => {
