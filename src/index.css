@@ -13,7 +13,7 @@ html::before {
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  background-image: url("data:image/svg+xml;utf8,<svg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'><circle cx='2' cy='2' r='2' fill='%2360A5FA' fill-opacity='0.055'/></svg>");
+  background-image: url("data:image/svg+xml;utf8,<svg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'><circle cx='2' cy='2' r='2' fill='%23FBBF24' fill-opacity='0.055'/></svg>");
   background-size: 20px;
   background-repeat: repeat;
   background-attachment: fixed;
@@ -54,12 +54,12 @@ html {
   /* ===== COLORS ===== */
   --primary-text-color: #ffffff;
   --secondary-text-color: #b0b3b8;
-  --accent-color: #60A5FA; /* Cambiado a azul claro para modo oscuro */
-  --accent-hover-color: #3B82F6; /* Cambiado a azul más oscuro para modo oscuro */
-  --accent-color-rgb: 96, 165, 250; /* Valor RGB para #60A5FA */
+  --accent-color: #FBBF24; /* Cambiado a naranja para modo oscuro */
+  --accent-hover-color: #E5A50A; /* Cambiado a naranja más oscuro para modo oscuro */
+  --accent-color-rgb: 251, 191, 36; /* Valor RGB para #FBBF24 */
   --text-color: #ffffff;
   --text-secondary-color: #b0b3b8;
-  --tag-text-color: #60A5FA; /* Cambiado a azul claro para modo oscuro */
+  --tag-text-color: #FBBF24; /* Cambiado a naranja para modo oscuro */
   --error-color: #ff4d4f;
   --error-color-rgb: 255, 77, 79;
 
