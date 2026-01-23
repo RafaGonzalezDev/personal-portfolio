@@ -60,4 +60,24 @@ export const PROJECTS = [
     category: 'Full Stack Application',
     highlights: ['Personalized recommendation system', 'Payment gateway integration', 'Real-time notifications'],
   },
+  {
+    id: 5,
+    title: 'CV Typewriter',
+    description: 'Minimalist web application for crafting professional CVs using a data-first approach. Features a live JSON editor compatible with RenderCV, Oxford-inspired design, A4 print optimization, smart page splitting, and Markdown support for clickable links in descriptions.',
+    technologies: ['React', 'Vite', 'Tailwind CSS', 'Shadcn/UI', 'JavaScript'],
+    image: '',
+    githubUrl: 'https://github.com/RafaGonzalezDev/cv-typewriter',
+    liveUrl: '',
+    featured: true,
+    year: '2025',
+    category: 'Web Application',
+    highlights: [
+      'Live JSON editor with real-time CV updates',
+      'RenderCV-compatible schema for data portability',
+      'Oxford-inspired professional typography and design',
+      'A4 print optimization with smart page splitting',
+      'Markdown support for clickable links in descriptions',
+      'Git-friendly JSON-based approach for version control'
+    ],
+  },
 ];
