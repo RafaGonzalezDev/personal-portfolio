@@ -37,6 +37,18 @@ export function ThemeProvider({ children }) {
   };
 
   useEffect(() => {
+    // Prevent transitions on page load
+    document.body.classList.add('no-transition');
+    
+    // Remove the class after styles are applied
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        document.body.classList.remove('no-transition');
+      });
+    });
+  }, []);
+
+  useEffect(() => {
     // Apply theme to document root
     const root = document.documentElement;
     
