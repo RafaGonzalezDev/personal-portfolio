@@ -1,34 +1,39 @@
 // Constantes para la sección de experiencia
 export const EXPERIENCES = [
   {
-    date: 'Nov 2023 – Present',
-    company: 'UST Global | Banco Santander',
-    role: 'Software Developer',
-    description: `**Led the integral development and optimization** of a micro frontend with **Angular** and **TypeScript**.
-- Implemented **NgRx** and a custom state system, improving performance and consistency.
-- Designed a **custom routing system** for micro frontends encapsulated through **Module Federation**.
-- **Promoted quality standards and best practices**, applying unit testing and integration with **Jasmine** and **Karma**.
-- **Collaborated strategically** with QA, development, and business teams in high-availability production environments.
-Technologies: Angular, TypeScript, NgRx, Node.js, Module Federation, Jasmine, Karma.`,
+    date: 'sept. 2025 - actualidad · 5 meses',
+    company: 'Santander Digital Services',
+    role: 'Angular Frontend Engineer',
+    location: 'Madrid, Comunidad de Madrid, España · Híbrido',
+    description: `Desarrollo y evolución de soluciones frontend en entorno enterprise bancario. **Ownership end-to-end** de microfrontends, con foco en calidad, entrega continua y automatización de procesos.
+
+- **Ownership end-to-end** de 2 microfrontends: desarrollo, mantenimiento, releases y despliegues.
+- Diseño y evolución de soluciones frontend con Angular y TypeScript en un entorno de alta disponibilidad.
+- Diseño e implementación de una **herramienta CLI** (Node.js + TypeScript) para automatizar i18n end-to-end: XLF → CSV → traducción por batches vía API → generación de locales.
+- **Reducción drástica** del esfuerzo de internacionalización de días a minutos (~10 min), habilitando entregas rápidas y adopción transversal en el equipo.
+- Colaboración transversal con equipos de QA, desarrollo y negocio para asegurar calidad y entrega continua.
+- Mentorización 1:1 a compañeros para estandarizar y agilizar procesos mediante workflows con MCPs.`,
   },
   {
-    date: 'Mar 2023 – Aug 2023',
-    company: 'GrayHats',
-    role: 'Software Developer',
-    description: `Designed **advanced solutions** with **React** and **GraphQL**, optimizing operational efficiency.
-- Developed **backend services** with **AWS Amplify**, ensuring secure integration and scalability.
-- Built a **full-stack cultural events platform** with modern architecture and optimized user experience.
-- Implemented **hybrid API strategies** combining GraphQL and REST for flexible data management.
-Technologies: React, Node.js, GraphQL, REST APIs, AWS Amplify, MongoDB, JavaScript.`,
+    date: 'dic. 2023 - sept. 2025 · 1 año 10 meses',
+    company: 'UST España & Latam',
+    role: 'Angular Frontend Engineer',
+    location: 'Madrid, Comunidad de Madrid, España · En remoto',
+    description: `Desarrollo de un microfrontend Angular/TypeScript en entorno enterprise, con foco en arquitectura, rendimiento, consistencia de estado y calidad.
+
+- Lideré el desarrollo integral y optimización de un microfrontend con Angular y TypeScript.
+- Implementé **NgRx** y un sistema de estado propio, mejorando rendimiento y consistencia.
+- Diseñé un **sistema de routing a medida** para microfrontends encapsulados mediante Module Federation.
+- Refuerzo del **testing unitario** (Jasmine/Karma) para cumplir quality gates de SonarQube y validaciones del pipeline (Jenkins).
+- Colaboración estrecha con equipos multidisciplinares (desarrollo, QA y negocio) para definición y evolución de funcionalidades.
+- **Onboarding y mentorización** de una nueva incorporación, facilitando ramp-up técnico y alineación con estándares del proyecto.`,
   },
   {
-    date: 'Sep 2021 – Jun 2023',
-    company: 'MEDAC',
-    role: 'Higher Technician in Web Application Development',
-    description: `**Comprehensive training** in modern web development with hands-on **real-world projects**.
-- Developed **full-stack applications** using JavaScript, **TypeScript**, **React**, and **PHP** with **Laravel**.
-- Gained expertise in **database management** with both **SQL** and **NoSQL** systems.
-- Applied **MVC architecture patterns** and modern development methodologies.
-Technologies: JavaScript, TypeScript, React, PHP, Laravel, Java, SQL, NoSQL, HTML5, CSS3.`,
+    date: 'mar. 2023 - ago. 2023 · 6 meses',
+    company: 'Grayhats',
+    role: 'Cloud Solutions Developer',
+    location: 'Córdoba, Andalucía, España · Presencial',
+    description: `- Diseño e implementación de soluciones avanzadas con **React y GraphQL**, centradas en la optimización de la eficiencia operativa y el rendimiento de las aplicaciones.
+- Desarrollo robusto de servicios backend utilizando **AWS Amplify**, lo que permitió una integración segura y escalable con la infraestructura de AWS Cloud.`,
   },
 ];
