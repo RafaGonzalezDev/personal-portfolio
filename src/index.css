@@ -11,12 +11,12 @@
 *,
 *::before,
 *::after {
-  transition: background-color 0.3s ease, 
-              color 0.3s ease, 
-              border-color 0.3s ease, 
-              box-shadow 0.3s ease,
-              fill 0.3s ease,
-              stroke 0.3s ease;
+  transition: background-color var(--duration-normal) var(--easing-standard),
+              color var(--duration-normal) var(--easing-standard),
+              border-color var(--duration-normal) var(--easing-standard),
+              box-shadow var(--duration-normal) var(--easing-standard),
+              fill var(--duration-normal) var(--easing-standard),
+              stroke var(--duration-normal) var(--easing-standard);
 }
 
 /* Prevent transitions on page load */
@@ -33,7 +33,7 @@ html::before {
   z-index: 0;
   pointer-events: none;
   background-image: url("data:image/svg+xml;utf8,<svg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'><circle cx='2' cy='2' r='2' fill='%23FBBF24' fill-opacity='0.055'/></svg>");
-  background-size: 20px;
+  background-size: var(--pattern-grid-size);
   background-repeat: repeat;
   background-attachment: fixed;
   /* Máscara radial solo para el patrón de puntos */
@@ -55,6 +55,13 @@ html {
 
 :root {
   font-family: 'Inter', sans-serif;
+
+  /* ===== EASING + DURATIONS ===== */
+  --duration-fast: 0.2s;
+  --duration-normal: 0.3s;
+  --duration-slow: 0.5s;
+  --easing-standard: ease;
+  --easing-emphasized: ease-in-out;
   
   /* ===== TYPOGRAPHY ===== */
   --font-size: 1.6rem;
@@ -67,6 +74,10 @@ html {
   --font-size-subtitle: 2rem;
   --font-size-icon-large: 3rem;
   --font-size-icon-medium: 1.8rem;
+  --font-size-icon-small: 1.2rem;
+  --font-size-icon-tablet: 2.5rem;
+  --font-size-icon-mobile: 2.2rem;
+  --font-size-tag: 1.1rem;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
 
@@ -77,6 +88,7 @@ html {
   --accent-hover-color: #E5A50A; /* Cambiado a naranja más oscuro para modo oscuro */
   --accent-color-rgb: 251, 191, 36; /* Valor RGB para #FBBF24 */
   --text-color: #ffffff;
+  --accent-foreground-color: #1a1e21;
   --text-secondary-color: #b0b3b8;
   --tag-text-color: #FBBF24; /* Cambiado a naranja para modo oscuro */
   --error-color: #ff4d4f;
@@ -95,8 +107,12 @@ html {
   --background-secondary: #1e2126;
 
   /* ===== SPACING ===== */
+  --spacing-2xs: 0.4rem;
   --spacing-xs: 0.5rem;
+  --spacing-sm-plus: 0.8rem;
+  --spacing-sm-tight: 0.75rem;
   --spacing-sm: 1rem;
+  --spacing-md-tight: 1.25rem;
   --spacing-md: 1.5rem;
   --spacing-lg: 2rem;
   --spacing-xl: 2.5rem;
@@ -107,8 +123,28 @@ html {
   --radius-sm: 4px;
   --radius-md: 8px;
   --radius-lg: 10px;
+  --radius-xl: 20px;
   --radius-full: 50%;
   --radius-pill: 5rem;
+
+  /* ===== SIZES ===== */
+  --size-control: 40px;
+  --size-control-icon: 18px;
+  --size-fab-icon: 20px;
+  --size-logo: 60px;
+  --size-divider: 2px;
+  --size-outline: 2px;
+  --pattern-grid-size: 20px;
+  --size-timeline-dot: 8px;
+  --size-timeline-node: 14px;
+  --size-timeline-offset: 20px;
+  --size-timeline-node-offset: 22px;
+
+  /* ===== LAYOUT ===== */
+  --layout-max-width: 1200px;
+  --layout-max-width-content: 1000px;
+  --layout-max-width-narrow: 900px;
+  --layout-max-width-reading: 600px;
 
   /* ===== SHADOWS ===== */
   --shadow-sm: 0 1px 4px rgba(0,0,0,0.06);
@@ -119,10 +155,22 @@ html {
   --shadow-accent: 0 4px 15px rgba(var(--accent-color-rgb),0.2);
   --shadow-accent-hover: 0 6px 20px rgba(var(--accent-color-rgb),0.3);
 
+  /* ===== SURFACES ===== */
+  --surface-glass-subtle: rgba(var(--card-bg-color-rgb), 0.05);
+  --surface-glass-soft: rgba(var(--card-bg-color-rgb), 0.15);
+  --surface-glass-strong: rgba(var(--card-bg-color-rgb), 0.25);
+  --surface-accent-soft: rgba(var(--accent-color-rgb), 0.15);
+  --surface-border-subtle: 1px solid rgba(var(--primary-text-color-rgb), 0.1);
+  --surface-border-soft: 1px solid rgba(var(--primary-text-color-rgb), 0.07);
+  --surface-border-accent: 1px solid rgba(var(--accent-color-rgb), 0.1);
+  --blur-surface: 3px;
+  --blur-surface-strong: 15px;
+  --blur-chip: 8px;
+
   /* ===== TRANSITIONS ===== */
-  --transition-fast: 0.2s ease;
-  --transition-normal: 0.3s ease;
-  --transition-slow: 0.5s ease;
+  --transition-fast: var(--duration-fast);
+  --transition-normal: var(--duration-normal);
+  --transition-slow: var(--duration-slow);
 
   /* ===== BREAKPOINTS ===== */
   --breakpoint-mobile: 480px;
@@ -145,6 +193,7 @@ html {
   --accent-hover-color: #2563EB; /* Azul más oscuro para modo claro */
   --accent-color-rgb: 59, 130, 246; /* Valor RGB para #3B82F6 */
   --text-color: #1a1a1a;
+  --accent-foreground-color: #ffffff;
   --text-secondary-color: #666666;
   --tag-text-color: #3B82F6; /* Azul para modo claro */
 
@@ -171,7 +220,8 @@ body {
   height: 100%;
   width: 100%;
   box-sizing: border-box;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color var(--duration-normal) var(--easing-standard),
+              color var(--duration-normal) var(--easing-standard);
 }
 
 #root {
@@ -179,7 +229,7 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: var(--layout-max-width);
   padding: 0;
   box-sizing: border-box;
 }

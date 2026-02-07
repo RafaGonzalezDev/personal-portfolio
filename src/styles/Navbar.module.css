@@ -9,7 +9,7 @@
   left: 0;
   right: 0;
   margin: 0 auto;
-  padding: 10px 0;
+  padding: var(--spacing-sm) 0;
   background: transparent;
   pointer-events: none; /* Allows clicks to pass through the container */
 }
@@ -18,9 +18,9 @@
 .unorderedList {
   display: flex;
   align-items: center;
-  background-color: rgba(var(--card-bg-color-rgb), 0.15); /* Igual que .projectCard */
+  background-color: var(--surface-glass-soft); /* Igual que .projectCard */
   border-radius: var(--radius-pill);
-  border: 1px solid rgba(var(--primary-text-color-rgb), 0.07); /* Igual que .projectCard/.content */
+  border: var(--surface-border-soft); /* Igual que .projectCard/.content */
   flex-direction: row;
   padding: 1.5rem 4rem;
   gap: var(--spacing-xl);
@@ -29,9 +29,9 @@
   margin: 0 auto;
   max-width: fit-content;
   z-index: var(--z-navbar-menu);
-  transition: all var(--transition-normal) ease-in-out;
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
+  transition: all var(--transition-normal) var(--easing-emphasized);
+  backdrop-filter: blur(var(--blur-surface));
+  -webkit-backdrop-filter: blur(var(--blur-surface));
 }
 
 /* ===== MENU ITEMS ===== */
@@ -47,7 +47,7 @@
   text-decoration: none;
   color: var(--secondary-text-color);
   font-size: var(--font-size);
-  transition: all var(--transition-normal) ease-in-out;
+  transition: all var(--transition-normal) var(--easing-emphasized);
 }
 
 .activeLink {
