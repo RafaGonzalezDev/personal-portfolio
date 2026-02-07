@@ -2,16 +2,23 @@
 export const PROJECTS = [
   {
     id: 1,
-    title: 'YouTube Transcript CLI',
-    description: 'CLI tool to download YouTube video transcripts in Markdown format. It extracts video IDs, downloads transcripts in specified languages, and saves them to .md files.',
-    technologies: ['Python', 'youtube-transcript-api'],
+    title: 'CV Typewriter',
+    description: 'Minimalist web application for crafting professional CVs using a data-first approach. Features a live JSON editor compatible with RenderCV, Oxford-inspired design, A4 print optimization, smart page splitting, and Markdown support for clickable links in descriptions.',
+    technologies: ['React', 'Vite', 'Tailwind CSS', 'Shadcn/UI', 'JavaScript'],
     image: '',
-    githubUrl: 'https://github.com/RafaGonzalezDev/youtube-transcript-cli',
+    githubUrl: 'https://github.com/RafaGonzalezDev/cv-typewriter',
     liveUrl: '',
     featured: true,
-    year: '2024',
-    category: 'CLI Tool',
-    highlights: ['Extracts YouTube video ID from any URL format', 'Downloads transcript in the specified language', 'Formats transcript and saves it to a .md file'],
+    year: '2025',
+    category: 'Web Application',
+    highlights: [
+      'Live JSON editor with real-time CV updates',
+      'RenderCV-compatible schema for data portability',
+      'Oxford-inspired professional typography and design',
+      'A4 print optimization with smart page splitting',
+      'Markdown support for clickable links in descriptions',
+      'Git-friendly JSON-based approach for version control'
+    ],
   },
   {
     id: 2,
@@ -59,25 +66,5 @@ export const PROJECTS = [
     year: '2023',
     category: 'Full Stack Application',
     highlights: ['Personalized recommendation system', 'Payment gateway integration', 'Real-time notifications'],
-  },
-  {
-    id: 5,
-    title: 'CV Typewriter',
-    description: 'Minimalist web application for crafting professional CVs using a data-first approach. Features a live JSON editor compatible with RenderCV, Oxford-inspired design, A4 print optimization, smart page splitting, and Markdown support for clickable links in descriptions.',
-    technologies: ['React', 'Vite', 'Tailwind CSS', 'Shadcn/UI', 'JavaScript'],
-    image: '',
-    githubUrl: 'https://github.com/RafaGonzalezDev/cv-typewriter',
-    liveUrl: '',
-    featured: true,
-    year: '2025',
-    category: 'Web Application',
-    highlights: [
-      'Live JSON editor with real-time CV updates',
-      'RenderCV-compatible schema for data portability',
-      'Oxford-inspired professional typography and design',
-      'A4 print optimization with smart page splitting',
-      'Markdown support for clickable links in descriptions',
-      'Git-friendly JSON-based approach for version control'
-    ],
   },
 ];

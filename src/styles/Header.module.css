@@ -2,7 +2,7 @@
 .header {
   position: relative; /* Cambiado de sticky a relative */
   width: 100%;
-  z-index: 1000;
+  z-index: var(--z-sticky);
   background-color: transparent;
   height: 0; /* Para que no ocupe espacio y solo contenga el navbar */
   overflow: visible; /* Para que el navbar sea visible fuera del header */

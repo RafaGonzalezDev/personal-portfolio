@@ -1,7 +1,7 @@
 /* ===== NAVBAR ===== */
 .navbar {
   position: fixed; /* Cambiado a fixed para asegurar que se mantenga en la pantalla */
-  z-index: 1100;
+  z-index: var(--z-navbar);
   display: flex;
   justify-content: center;
   width: 100%;
@@ -19,17 +19,17 @@
   display: flex;
   align-items: center;
   background-color: rgba(var(--card-bg-color-rgb), 0.15); /* Igual que .projectCard */
-  border-radius: 5rem;
+  border-radius: var(--radius-pill);
   border: 1px solid rgba(var(--primary-text-color-rgb), 0.07); /* Igual que .projectCard/.content */
   flex-direction: row;
   padding: 1.5rem 4rem;
-  gap: 2.5rem;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15), inset 0 0 0 1px rgba(var(--primary-text-color-rgb), 0.07); /* Igual que .projectCard */
+  gap: var(--spacing-xl);
+  box-shadow: var(--shadow-card);
   pointer-events: auto;
   margin: 0 auto;
   max-width: fit-content;
-  z-index: 1200;
-  transition: all 0.3s ease-in-out;
+  z-index: var(--z-navbar-menu);
+  transition: all var(--transition-normal) ease-in-out;
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
 }
@@ -47,7 +47,7 @@
   text-decoration: none;
   color: var(--secondary-text-color);
   font-size: var(--font-size);
-  transition: all 0.3s ease-in-out;
+  transition: all var(--transition-normal) ease-in-out;
 }
 
 .activeLink {

@@ -1,6 +1,6 @@
 /* ===== MAIN SECTION ===== */
 .experienceSection {
-  padding: 0 2rem;
+  padding: 0 var(--spacing-lg);
   color: var(--primary-text-color);
   max-width: 100%;
   margin: 0 auto;
@@ -10,7 +10,7 @@
 /* ===== TITLE ===== */
 .title {
   font-size: var(--font-size-title);
-  margin-bottom: 3rem;
+  margin-bottom: var(--spacing-2xl);
   text-align: center;
   font-weight: var(--font-weight-bold);
 }
@@ -38,7 +38,7 @@
   position: relative;
   width: 50%;
   box-sizing: border-box;
-  margin-bottom: 3rem;
+  margin-bottom: var(--spacing-2xl);
   max-width: 100%;
 }
 
@@ -84,7 +84,7 @@
   border: 2px solid var(--accent-color);
   border-radius: 50%;
   z-index: 2;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  box-shadow: var(--shadow-sm);
   display: block;
 }
 
@@ -100,26 +100,22 @@
 
 /* ===== CONTENT ===== */
 .content {
-  padding: 2rem 2.5rem;
+  padding: var(--spacing-lg) var(--spacing-xl);
   background-color: rgba(var(--card-bg-color-rgb), 0.05);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(15px);
     border: 1px solid rgba(var(--primary-text-color-rgb), 0.1);
-  border-radius: 10px;
+  border-radius: var(--radius-lg);
   position: relative;
-  box-shadow: 
-    0 8px 32px rgba(0, 0, 0, 0.15),
-    inset 0 0 0 1px rgba(var(--primary-text-color-rgb), 0.07);
+  box-shadow: var(--shadow-card);
   text-align: left;
   width: 100%;
   box-sizing: border-box;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform var(--transition-normal) ease, box-shadow var(--transition-normal) ease;
 }
 
 .content:hover {
-  box-shadow: 
-    0 12px 36px rgba(0, 0, 0, 0.3),
-    inset 0 0 0 1px rgba(var(--primary-text-color-rgb), 0.2);
+  box-shadow: var(--shadow-card-hover);
 }
 
 /* ===== CONTENT ELEMENTS ===== */
@@ -127,13 +123,13 @@
   font-size: var(--font-size-text);
   color: var(--secondary-text-color);
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--spacing-xs);
 }
 
 .company {
   font-size: var(--font-size-company);
   font-weight: var(--font-weight-bold);
-  margin: 0.5rem 0;
+  margin: var(--spacing-xs) 0;
   color: var(--primary-text-color);
 }
 
@@ -148,7 +144,7 @@
   font-size: var(--font-size-text);
   line-height: 1.6;
   color: var(--secondary-text-color);
-  margin-bottom: 1rem;
+  margin-bottom: var(--spacing-sm);
 }
 
 /* ===== DESCRIPTION LISTS ===== */
@@ -157,7 +153,7 @@
   line-height: 1.6;
   color: var(--secondary-text-color);
   text-align: left;
-  margin: 1rem 0;
+  margin: var(--spacing-sm) 0;
   padding-left: 0;
   list-style-type: none;
 }
@@ -165,7 +161,7 @@
 .descriptionList li {
   margin-bottom: 0.8rem;
   position: relative;
-  padding-left: 1.5rem;
+  padding-left: var(--spacing-md);
 }
 
 .descriptionList li::before {
@@ -179,9 +175,9 @@
 .techLine {
   font-size: var(--font-size-text);
   background: rgba(var(--accent-color-rgb), 0.15);
-  padding: 0.8rem 1rem;
-  border-radius: 8px;
-  margin-top: 1rem;
+  padding: 0.8rem var(--spacing-sm);
+  border-radius: var(--radius-md);
+  margin-top: var(--spacing-sm);
   color: var(--secondary-text-color);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -189,9 +185,9 @@
 }
 
 .techSection {
-  margin-top: 3rem;
+  margin-top: var(--spacing-2xl);
   padding: 0;
-  border-radius: 4px;
+  border-radius: var(--radius-sm);
 }
 
 .techTitle {
@@ -208,9 +204,9 @@
 }
 
 /* ===== RESPONSIVE ===== */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: var(--breakpoint-tablet)) {
   .experienceSection {
-    padding: 0 1rem;
+    padding: 0 var(--spacing-sm);
     margin-top: 0;
     margin-bottom: 0;
   }
@@ -255,9 +251,9 @@
     border-left: none;
     border-top: none;
   border: 1px solid rgba(var(--primary-text-color-rgb), 0.1);
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    border-radius: 10px;
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    border-radius: var(--radius-lg);
   }
 
   .timelineItem,

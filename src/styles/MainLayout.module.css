@@ -16,7 +16,7 @@
 /* ===== FOOTER ===== */
 .footer {
   margin-top: auto;
-  padding: 3rem 2rem;
+  padding: var(--spacing-2xl) var(--spacing-lg);
   text-align: center;
   color: var(--primary-text-color);
   border-top: 1px solid rgba(var(--primary-text-color-rgb), 0.05);
@@ -30,7 +30,7 @@
   max-width: 1200px;
   margin: 0 auto;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: var(--spacing-lg);
 }
 
 /* ===== LOGO ===== */
@@ -38,22 +38,22 @@
   font-size: var(--font-size-subtitle);
   font-weight: 700;
   color: var(--accent-color);
-  padding: 0.8rem 1rem;
+  padding: 0.8rem var(--spacing-sm);
   border: 2px solid var(--accent-color);
-  border-radius: 50%;
+  border-radius: var(--radius-full);
   height: 60px;
   width: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, rgba(var(--accent-color-rgb), 0.1), transparent);
-  box-shadow: 0 4px 15px rgba(var(--accent-color-rgb), 0.2);
-  transition: all 0.3s ease;
+  box-shadow: var(--shadow-accent);
+  transition: all var(--transition-normal) ease;
 }
 
 .footerLogo:hover {
   transform: rotate(10deg) scale(1.05);
-  box-shadow: 0 6px 20px rgba(var(--accent-color-rgb), 0.3);
+  box-shadow: var(--shadow-accent-hover);
 }
 
 /* ===== TEXT ===== */
@@ -77,13 +77,13 @@
 /* ===== LINKS ===== */
 .footerLinks {
   display: flex;
-  gap: 1.5rem;
+  gap: var(--spacing-md);
 }
 
 .footerLinks a {
   color: var(--secondary-text-color);
   font-size: var(--font-size-icon-medium);
-  transition: all 0.3s ease;
+  transition: all var(--transition-normal) ease;
 }
 
 .footerLinks a:hover {
@@ -99,6 +99,6 @@
   }
 
   .footerText {
-    margin: 1rem 0;
+    margin: var(--spacing-sm) 0;
   }
 }

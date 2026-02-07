@@ -6,12 +6,12 @@
   position: fixed;
   bottom: 16px;
   right: 16px;
-  z-index: 1000;
+  z-index: var(--z-sticky);
   
   /* Tamaño y forma */
   width: 40px;
   height: 40px;
-  border-radius: 50%;
+  border-radius: var(--radius-full);
   
   /* Estilos visuales */
   background-color: var(--accent-color);
@@ -20,7 +20,7 @@
   cursor: pointer;
   
   /* Sombra */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--shadow-md);
   
   /* Flex para centrar contenido */
   display: flex;
@@ -28,14 +28,14 @@
   justify-content: center;
   
   /* Transición suave */
-  transition: all 0.2s ease;
+  transition: all var(--transition-fast) ease;
 }
 
 /* Estados interactivos */
 .themeToggle:hover {
   background-color: var(--accent-hover-color);
   transform: scale(1.1);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-lg);
 }
 
 .themeToggle:focus {
@@ -52,7 +52,7 @@
   width: 20px;
   height: 20px;
   fill: currentColor;
-  transition: transform 0.2s ease;
+  transition: transform var(--transition-fast) ease;
 }
 
 /* Animación de rotación para el icono */

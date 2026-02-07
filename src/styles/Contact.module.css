@@ -1,6 +1,6 @@
 /* ===== MAIN SECTION ===== */
 .contactSection {
-  padding: 0 2rem 4rem 2rem;
+  padding: 0 var(--spacing-lg) var(--spacing-3xl) var(--spacing-lg);
   margin: 0 auto;
   max-width: 900px;
   width: 100%;
@@ -25,15 +25,15 @@
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 3rem;
+  margin-bottom: var(--spacing-2xl);
 }
 
 /* ===== SOCIAL MEDIA CONTAINER ===== */
 .contactCardsContainer {
   display: flex;
   justify-content: center;
-  gap: 4rem;
-  margin: 3rem auto;
+  gap: var(--spacing-3xl);
+  margin: var(--spacing-2xl) auto;
 }
 
 /* ===== SOCIAL MEDIA ICON ===== */
@@ -49,7 +49,7 @@
   align-items: center;
   color: var(--secondary-text-color);
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all var(--transition-normal) ease;
 }
 
 .contactCardLink:hover {
@@ -59,8 +59,8 @@
 
 .contactIcon {
   font-size: var(--font-size-icon-large);
-  transition: transform 0.3s;
-  margin-bottom: 1rem;
+  transition: transform var(--transition-normal);
+  margin-bottom: var(--spacing-sm);
 }
 
 .contactCardLink:hover .contactIcon {
@@ -70,15 +70,15 @@
 .contactValue {
   font-size: var(--font-size-text);
   font-weight: 500;
-  transition: color 0.3s;
+  transition: color var(--transition-normal);
 }
 
 /* ===== CLOSING MESSAGE ===== */
 .contactMessage {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: var(--spacing-md);
   color: var(--secondary-text-color);
-  margin-top: 3rem;
+  margin-top: var(--spacing-2xl);
   font-style: italic;
 }
 
@@ -86,16 +86,16 @@
 .error {
   color: var(--error-color);
   font-size: var(--font-size-text);
-  margin-top: 0.5rem;
+  margin-top: var(--spacing-xs);
   font-weight: 500;
   display: flex;
   align-items: center;
-  animation: fadeIn 0.3s ease;
+  animation: fadeIn var(--transition-normal) ease;
 }
 
 .error::before {
   content: "⚠️";
-  margin-right: 0.5rem;
+  margin-right: var(--spacing-xs);
   font-size: var(--font-size-text);
 }
 
@@ -111,9 +111,9 @@
 }
 
 /* ===== RESPONSIVE ===== */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: var(--breakpoint-tablet)) {
   .contactCardsContainer {
-    gap: 3rem;
+    gap: var(--spacing-2xl);
   }
   
   .contactIcon {
@@ -121,9 +121,9 @@
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: var(--breakpoint-mobile)) {
   .contactCardsContainer {
-    gap: 2rem;
+    gap: var(--spacing-lg);
   }
   
   .contactIcon {
