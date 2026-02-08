@@ -18,16 +18,19 @@
 .unorderedList {
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   background-color: var(--surface-glass-soft); /* Igual que .projectCard */
   border-radius: var(--radius-pill);
   border: var(--surface-border-soft); /* Igual que .projectCard/.content */
   flex-direction: row;
-  padding: 1.5rem 4rem;
-  gap: var(--spacing-xl);
+  padding: var(--spacing-md-tight) var(--spacing-2xl);
+  gap: var(--spacing-lg);
   box-shadow: var(--shadow-card);
   pointer-events: auto;
   margin: 0 auto;
-  max-width: fit-content;
+  width: max-content;
+  max-width: calc(100% - (var(--layout-padding-inline) * 2));
   z-index: var(--z-navbar-menu);
   transition: all var(--transition-normal) var(--easing-emphasized);
   backdrop-filter: blur(var(--blur-surface));
@@ -54,4 +57,27 @@
   outline: none;
   color: var(--accent-color);
   font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    top: var(--spacing-sm-plus);
+  }
+
+  .unorderedList {
+    width: 100%;
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-sm-plus) var(--spacing-md);
+    gap: var(--spacing-md);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .unorderedList {
+    gap: var(--spacing-sm);
+  }
+
+  .navLink {
+    font-size: var(--font-size-text);
+  }
 }

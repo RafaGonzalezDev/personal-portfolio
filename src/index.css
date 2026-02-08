@@ -177,11 +177,35 @@ html {
   --breakpoint-tablet: 768px;
   --breakpoint-desktop: 1200px;
 
+  /* ===== RESPONSIVE TOKENS ===== */
+  --layout-padding-inline: var(--spacing-lg);
+  --section-spacing-block: var(--spacing-3xl);
+  --navbar-offset-top: 12rem;
+  --home-image-max-width: 52rem;
+
   /* ===== Z-INDEX ===== */
   --z-dropdown: 999;
   --z-sticky: 1000;
   --z-navbar: 1100;
   --z-navbar-menu: 1200;
+}
+
+@media screen and (max-width: 1024px) {
+  :root {
+    --layout-padding-inline: var(--spacing-md);
+    --section-spacing-block: var(--spacing-2xl);
+    --navbar-offset-top: 10rem;
+    --home-image-max-width: 42rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --layout-padding-inline: var(--spacing-sm);
+    --section-spacing-block: var(--spacing-xl);
+    --navbar-offset-top: 8rem;
+    --home-image-max-width: 34rem;
+  }
 }
 
 /* ===== LIGHT THEME ===== */

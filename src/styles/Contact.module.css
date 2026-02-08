@@ -1,6 +1,6 @@
 /* ===== MAIN SECTION ===== */
 .contactSection {
-  padding: 0 var(--spacing-lg) var(--spacing-3xl) var(--spacing-lg);
+  padding: 0 0 var(--section-spacing-block) 0;
   margin: 0 auto;
   max-width: var(--layout-max-width-narrow);
   width: 100%;
@@ -32,6 +32,7 @@
 .contactCardsContainer {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: var(--spacing-3xl);
   margin: var(--spacing-2xl) auto;
 }
@@ -111,7 +112,7 @@
 }
 
 /* ===== RESPONSIVE ===== */
-@media screen and (max-width: var(--breakpoint-tablet)) {
+@media screen and (max-width: 768px) {
   .contactCardsContainer {
     gap: var(--spacing-2xl);
   }
@@ -121,9 +122,13 @@
   }
 }
 
-@media screen and (max-width: var(--breakpoint-mobile)) {
+@media screen and (max-width: 480px) {
   .contactCardsContainer {
     gap: var(--spacing-lg);
+  }
+
+  .contactCard {
+    min-width: 10rem;
   }
   
   .contactIcon {

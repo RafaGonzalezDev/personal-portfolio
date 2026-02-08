@@ -1,6 +1,6 @@
 /* ===== MAIN SECTION ===== */
 .experienceSection {
-  padding: 0 var(--spacing-lg);
+  padding: 0;
   color: var(--primary-text-color);
   max-width: 100%;
   margin: 0 auto;
@@ -205,9 +205,8 @@
 }
 
 /* ===== RESPONSIVE ===== */
-@media screen and (max-width: var(--breakpoint-tablet)) {
+@media screen and (max-width: 768px) {
   .experienceSection {
-    padding: 0 var(--spacing-sm);
     margin-top: 0;
     margin-bottom: 0;
   }

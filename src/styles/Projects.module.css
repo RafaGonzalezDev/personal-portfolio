@@ -1,6 +1,6 @@
 /* ===== MAIN SECTION ===== */
 .projectsSection {
-  padding: 0 var(--spacing-lg); /* Ajustado de 2rem a 6rem para mantener consistencia con otras secciones */
+  padding: 0;
   max-width: var(--layout-max-width);
   margin: 0 auto;
 }
@@ -19,7 +19,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--spacing-lg);
-  margin-bottom: var(--spacing-3xl);
+  margin-bottom: var(--section-spacing-block);
 }
 
 /* ===== PROJECT CARD ===== */
@@ -108,9 +108,9 @@
 }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: var(--breakpoint-tablet)) {
+@media screen and (max-width: 768px) {
   .projectsGrid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 
   .title {
@@ -118,16 +118,12 @@
     margin-bottom: var(--spacing-lg);
   }
 
-  .projectsSection {
-    padding: 0 var(--spacing-sm); /* Ajustado de 3rem a 4rem para ser consistente con el resto de secciones en móvil */
-  }
-
   .projectCard {
-    padding: var(--spacing-md) 2rem;
+    padding: var(--spacing-md) var(--spacing-lg);
   }
 }
 
-@media (max-width: var(--breakpoint-mobile)) {
+@media screen and (max-width: 480px) {
   .projectsGrid {
     grid-template-columns: 1fr;
   }

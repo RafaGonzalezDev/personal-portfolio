@@ -16,7 +16,7 @@
 }
 
 /* ===== RESPONSIVE ===== */
-@media screen and (max-width: var(--breakpoint-tablet)) {
+@media screen and (max-width: 768px) {
   .separatorContainer {
     padding: var(--spacing-md) 0;
   }
