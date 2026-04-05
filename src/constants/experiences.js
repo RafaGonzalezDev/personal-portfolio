@@ -1,7 +1,17 @@
-// Constantes para la sección de experiencia
 export const EXPERIENCES = [
   {
-    date: 'sept. 2025 - actualidad · 5 meses',
+    start: { month: 3, year: 2026 },
+    end: null,
+    isCurrent: true,
+    company: 'Banco Sabadell',
+    role: 'Frontend Architect',
+    location: 'España · Híbrido',
+    description: `Incorporación al equipo de **Arquitectura Frontend** con responsabilidad en la **definición** y **gobernanza** del ecosistema técnico del banco. Rol híbrido que combina **diseño estratégico de arquitecturas** con implementación **hands-on** en entornos enterprise.`,
+  },
+  {
+    start: { month: 9, year: 2025 },
+    end: { month: 3, year: 2026 },
+    isCurrent: false,
     company: 'Santander Digital Services',
     role: 'Angular Frontend Engineer',
     location: 'Madrid, Comunidad de Madrid, España · Híbrido',
@@ -15,7 +25,9 @@ export const EXPERIENCES = [
 - Mentorización 1:1 a compañeros para estandarizar y agilizar procesos mediante workflows con MCPs.`,
   },
   {
-    date: 'dic. 2023 - sept. 2025 · 1 año 10 meses',
+    start: { month: 12, year: 2023 },
+    end: { month: 9, year: 2025 },
+    isCurrent: false,
     company: 'UST España & Latam',
     role: 'Angular Frontend Engineer',
     location: 'Madrid, Comunidad de Madrid, España · En remoto',
@@ -29,7 +41,9 @@ export const EXPERIENCES = [
 - **Onboarding y mentorización** de una nueva incorporación, facilitando ramp-up técnico y alineación con estándares del proyecto.`,
   },
   {
-    date: 'mar. 2023 - ago. 2023 · 6 meses',
+    start: { month: 3, year: 2023 },
+    end: { month: 8, year: 2023 },
+    isCurrent: false,
     company: 'Grayhats',
     role: 'Cloud Solutions Developer',
     location: 'Córdoba, Andalucía, España · Presencial',
