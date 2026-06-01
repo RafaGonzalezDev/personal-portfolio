@@ -1,6 +1,6 @@
 // Constantes para el resumen profesional
 export const PROFESSIONAL_SUMMARY = {
-  title: 'Software Developer',
+  title: 'Frontend Engineer',
   name: 'Rafa González Rubio',
-  description: `Software engineer specialized in **Angular**, global state optimization with **NgRx**, and **scalable architecture**. **Technical leadership** and commitment to quality standards, multifunctional collaboration, and continuous improvement. Consolidated experience in **large-scale projects** and **high availability**, focused on continuous improvement and business value optimization.`,
+  description: `Frontend Engineer in enterprise banking environments, focused on **AI Developer Tooling** and **Developer Automation**. I work with Angular, TypeScript and microfrontends, applying **agentic workflows**, **Model Context Protocol (MCP)**, **Playwright** and local LLM inference to accelerate technical analysis, testing, documentation and continuous delivery.`,
 };

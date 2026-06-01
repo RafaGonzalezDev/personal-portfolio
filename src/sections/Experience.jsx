@@ -3,13 +3,13 @@ import styles from '@/styles/Experience.module.css';
 import { EXPERIENCES } from '@/constants';
 import { parseHighlight } from '@/utils';
 
-const MONTH_LABELS = ['ene.', 'feb.', 'mar.', 'abr.', 'may.', 'jun.', 'jul.', 'ago.', 'sept.', 'oct.', 'nov.', 'dic.'];
+const MONTH_LABELS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 const getMonthLabel = (month) => MONTH_LABELS[month - 1];
 
 const getDisplayEndDate = (experience) => {
   if (experience.isCurrent || experience.end === null) {
-    return 'actualidad';
+    return 'Present';
   }
 
   return `${getMonthLabel(experience.end.month)} ${experience.end.year}`;
@@ -31,11 +31,11 @@ const formatDuration = (start, end) => {
   const parts = [];
 
   if (years > 0) {
-    parts.push(`${years} ${years === 1 ? 'año' : 'años'}`);
+    parts.push(`${years} ${years === 1 ? 'year' : 'years'}`);
   }
 
   if (months > 0) {
-    parts.push(`${months} ${months === 1 ? 'mes' : 'meses'}`);
+    parts.push(`${months} ${months === 1 ? 'month' : 'months'}`);
   }
 
   return parts.join(' ');
@@ -51,31 +51,15 @@ const formatExperienceDate = (experience) => {
 
 const formatDescription = (description) => {
   const lines = description.split('\n');
-  const summary = lines[0].replace(/^- /, '').trim();
-  const bullets = lines
-    .slice(1)
-    .map((line) => line.trim())
-    .filter((line) => line.startsWith('-'));
-
-  const techLine = lines.find((line) => line.startsWith('Technologies:'));
-  const technologies = techLine ? techLine.replace('Technologies:', '').trim() : '';
+  const paragraphs = lines.filter((line) => line.trim());
 
   return (
     <>
-      {summary && <p className={styles.description}>{parseHighlight(summary)}</p>}
-      {bullets.length > 0 && (
-        <ul className={styles.descriptionList}>
-          {bullets.map((bullet) => (
-            <li key={bullet}>{parseHighlight(bullet.replace(/^- /, ''))}</li>
-          ))}
-        </ul>
-      )}
-      {techLine && (
-        <div className={styles.techSection}>
-          <p className={styles.techTitle}>Technologies:</p>
-          <p className={styles.techList}>{parseHighlight(technologies)}</p>
-        </div>
-      )}
+      {paragraphs.map((para, index) => (
+        <p key={index} className={styles.description}>
+          {parseHighlight(para.replace(/^- /, ''))}
+        </p>
+      ))}
     </>
   );
 };
@@ -93,7 +77,7 @@ const Experience = () => {
               key={`${experience.company}-${experience.role}-${experience.start.month}-${experience.start.year}`}
               className={`${styles.timelineItem} ${side}`}
             >
-              <div className={styles.iconCircle} aria-label="Punto de experiencia" title="Punto de experiencia" />
+              <div className={styles.iconCircle} aria-label="Experience point" title="Experience point" />
               <div className={styles.content}>
                 <span className={styles.date}>{formatExperienceDate(experience)}</span>
                 <h3 className={styles.company}>{experience.company}</h3>

@@ -9,10 +9,6 @@ export const TECH_STACK = [
     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
   },
   {
-    name: 'JavaScript',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
-  },
-  {
     name: 'React',
     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
   },
@@ -21,51 +17,59 @@ export const TECH_STACK = [
     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
   },
   {
+    name: 'RxJS',
+    icon: 'https://rxjs.dev/generated/images/marketing/home/Rx_Logo-512-512.png',
+  },
+  {
     name: 'NgRx',
     icon: 'https://ngrx.io/assets/images/badge.svg',
   },
   {
-    name: 'GraphQL',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg',
+    name: 'Playwright',
+    icon: 'https://playwright.dev/img/playwright-logo.svg',
   },
   {
-    name: 'AWS',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg',
+    name: 'MCP',
+    icon: 'https://modelcontextprotocol.io/img/logo.png',
   },
   {
-    name: 'PHP',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg',
+    name: 'Microfrontends',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg',
   },
   {
-    name: 'Laravel',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg',
-  },
-  {
-    name: 'Tailwind CSS',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg',
+    name: 'Module Federation',
+    icon: 'https://webpack.js.org/static/img/icon-square-big.svg',
   },
   {
     name: 'Vite',
     icon: 'https://vitejs.dev/logo.svg',
   },
   {
-    name: 'MongoDB',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
+    name: 'Tailwind CSS',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg',
   },
   {
-    name: 'MySQL',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
+    name: 'GraphQL',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg',
+  },
+  {
+    name: 'AWS Amplify',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg',
+  },
+  {
+    name: 'llama.cpp',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
+  },
+  {
+    name: 'OpenWebUI',
+    icon: 'https://openwebui.com/favicon.ico',
   },
   {
     name: 'Git',
     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
   },
   {
-    name: 'HTML5',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
-  },
-  {
-    name: 'CSS3',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
+    name: 'CI/CD',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg',
   },
 ];
