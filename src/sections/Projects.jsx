@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '@/styles/Projects.module.css';
+import Divider from '@/components/Divider/Divider';
 import { PROJECTS } from '@/constants';
 
 const ProjectRow = React.memo(({ project, index }) => {
@@ -68,7 +69,12 @@ const Projects = () => {
 
       <div className={styles.list}>
         {PROJECTS.map((project, index) => (
-          <ProjectRow key={project.id} project={project} index={index} />
+          <React.Fragment key={project.id}>
+            <ProjectRow project={project} index={index} />
+            {(index + 1) % 2 === 0 && index < PROJECTS.length - 1 && (
+              <Divider />
+            )}
+          </React.Fragment>
         ))}
       </div>
     </section>
