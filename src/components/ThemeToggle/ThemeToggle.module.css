@@ -1,61 +1,38 @@
-/* ThemeToggle.module.css */
-
-/* Botón flotante */
-.themeToggle {
-  /* Posicionamiento */
+.toggle {
   position: fixed;
-  bottom: var(--spacing-md);
-  right: var(--spacing-md);
-  z-index: var(--z-sticky);
-  
-  /* Tamaño y forma */
-  width: var(--size-control);
-  height: var(--size-control);
-  border-radius: var(--radius-full);
-  
-  /* Estilos visuales */
-  background-color: var(--accent-color);
-  color: var(--accent-foreground-color);
-  border: none;
-  cursor: pointer;
-  
-  /* Sombra */
-  box-shadow: var(--shadow-md);
-  
-  /* Flex para centrar contenido */
-  display: flex;
+  bottom: var(--space-5);
+  right: var(--space-5);
+  z-index: var(--z-nav);
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  
-  /* Transición suave */
-  transition: all var(--transition-fast) var(--easing-standard);
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+  background-color: var(--bg-elevated);
+  border: var(--border-thin);
+  border-radius: var(--radius-md);
+  transition: color var(--duration-base) var(--ease),
+    border-color var(--duration-base) var(--ease);
 }
 
-/* Estados interactivos */
-.themeToggle:hover {
-  background-color: var(--accent-hover-color);
-  transform: scale(1.1);
-  box-shadow: var(--shadow-lg);
+.toggle:hover {
+  color: var(--text);
+  border-color: var(--border-strong);
 }
 
-.themeToggle:focus {
-  outline: var(--size-outline) solid var(--accent-color);
-  outline-offset: var(--size-outline);
+.toggle:focus-visible {
+  outline: var(--outline-width) solid var(--accent);
+  outline-offset: var(--outline-offset);
 }
 
-.themeToggle:active {
-  transform: scale(0.95);
+.indicator {
+  font-size: var(--size-indicator);
+  line-height: 1;
+  color: var(--accent);
 }
 
-/* Icono SVG */
-.icon {
-  width: var(--size-fab-icon);
-  height: var(--size-fab-icon);
-  fill: currentColor;
-  transition: transform var(--transition-fast) var(--easing-standard);
-}
-
-/* Animación de rotación para el icono */
-.themeToggle:hover .icon {
-  transform: rotate(15deg);
+.label {
+  line-height: 1;
 }
