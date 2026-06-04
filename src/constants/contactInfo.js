@@ -1,8 +1,7 @@
-// Constantes para la sección de contacto
 export const CONTACT_INFO = {
   title: 'Contact',
   subtitle: "Let's Connect",
-  description: "I'm open to job opportunities where I can contribute, learn and grow. Feel free to connect with me through social media:",
+  description: "Open to roles where I can keep shipping production frontend while building the agentic tooling that makes the team faster. Reach out through:",
   contactMethods: [
     {
       id: 'github',
