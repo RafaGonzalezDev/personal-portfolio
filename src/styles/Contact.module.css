@@ -1,141 +1,111 @@
-/* ===== MAIN SECTION ===== */
-.contactSection {
-  padding: 0 0 var(--section-spacing-block) 0;
-  margin: 0 auto;
-  max-width: var(--layout-max-width-narrow);
-  width: 100%;
-  color: var(--primary-text-color);
-  background: none;
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  max-width: var(--max-width);
 }
 
-/* ===== TITLE ===== */
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
 .title {
-  font-size: var(--font-size-title, 2.8rem);
-  text-align: center;
-  font-weight: var(--font-weight-bold);
-  color: var(--primary-text-color);
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text);
+  letter-spacing: var(--tracking-tight);
 }
 
-/* ===== INFO TEXT ===== */
-.infoText {
-  font-size: var(--font-size);
-  line-height: 1.6;
-  color: var(--secondary-text-color);
-  text-align: center;
-  max-width: var(--layout-max-width-reading);
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: var(--spacing-2xl);
+.titleIndex {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-base);
+  color: var(--accent);
+  font-weight: var(--font-weight-medium);
 }
 
-/* ===== SOCIAL MEDIA CONTAINER ===== */
-.contactCardsContainer {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: var(--spacing-3xl);
-  margin: var(--spacing-2xl) auto;
+.subtitle {
+  font-size: var(--font-size-base);
+  color: var(--text-muted);
+  line-height: var(--line-height-normal);
 }
 
-/* ===== SOCIAL MEDIA ICON ===== */
-.contactCard {
+.list {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  border-top: var(--border-thin);
 }
 
-.contactCardLink {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: var(--secondary-text-color);
-  text-decoration: none;
-  transition: all var(--transition-normal) var(--easing-standard);
-}
-
-.contactCardLink:hover {
-  color: var(--accent-color);
-  transform: translateY(-3px);
-}
-
-.contactIcon {
-  font-size: var(--font-size-icon-large);
-  transition: transform var(--transition-normal) var(--easing-standard);
-  margin-bottom: var(--spacing-sm);
-}
-
-.contactCardLink:hover .contactIcon {
-  transform: scale(1.1);
-}
-
-.contactValue {
-  font-size: var(--font-size-text);
-  font-weight: 500;
-  transition: color var(--transition-normal) var(--easing-standard);
-}
-
-/* ===== CLOSING MESSAGE ===== */
-.contactMessage {
-  text-align: center;
-  font-size: var(--font-size-role);
-  color: var(--secondary-text-color);
-  margin-top: var(--spacing-2xl);
-  font-style: italic;
-}
-
-/* ===== ERROR MESSAGES ===== */
-.error {
-  color: var(--error-color);
-  font-size: var(--font-size-text);
-  margin-top: var(--spacing-xs);
-  font-weight: 500;
+.item {
   display: flex;
   align-items: center;
-  animation: fadeIn var(--transition-normal) var(--easing-standard);
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-4) 0;
+  border-bottom: var(--border-thin);
+  transition: background-color var(--duration-base) var(--ease);
 }
 
-.error::before {
-  content: "⚠️";
-  margin-right: var(--spacing-xs);
-  font-size: var(--font-size-text);
+.item:hover {
+  background-color: var(--bg-subtle);
+  margin-inline: calc(-1 * var(--space-4));
+  padding-inline: var(--space-4);
+  border-radius: var(--radius-sm);
+  border-bottom-color: transparent;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-5px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.itemLabel {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+  color: var(--text-faint);
 }
 
-/* ===== RESPONSIVE ===== */
-@media screen and (max-width: 768px) {
-  .contactCardsContainer {
-    gap: var(--spacing-2xl);
-  }
-  
-  .contactIcon {
-    font-size: var(--font-size-icon-tablet);
-  }
+.itemLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+  color: var(--text);
+  transition: color var(--duration-base) var(--ease);
 }
 
-@media screen and (max-width: 480px) {
-  .contactCardsContainer {
-    gap: var(--spacing-lg);
-  }
+.itemLink:hover {
+  color: var(--accent);
+}
 
-  .contactCard {
-    min-width: 10rem;
-  }
-  
-  .contactIcon {
-    font-size: var(--font-size-icon-mobile);
-  }
-  
-  .contactValue {
-    font-size: var(--font-size-icon-small);
+.itemValue {
+  letter-spacing: var(--tracking-normal);
+}
+
+.itemArrow {
+  color: var(--text-faint);
+  font-size: var(--font-size-base);
+  line-height: 1;
+  transition: color var(--duration-base) var(--ease),
+    transform var(--duration-base) var(--ease);
+}
+
+.itemLink:hover .itemArrow {
+  color: var(--accent);
+  transform: translate(var(--hover-lift), calc(-1 * var(--hover-lift)));
+}
+
+.footer {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+  color: var(--text-faint);
+  padding-top: var(--space-2);
+}
+
+@media (max-width: 480px) {
+  .item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
   }
 }

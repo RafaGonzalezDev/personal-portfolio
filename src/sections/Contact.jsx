@@ -4,30 +4,34 @@ import { CONTACT_INFO } from '@/constants';
 
 const Contact = () => {
   return (
-    <section className={`section ${styles.contactSection}`} id="contact">
-      <h2 className={styles.title}>{CONTACT_INFO.title}</h2>
-      <p className={styles.infoText}>{CONTACT_INFO.description}</p>
-      
-      <div className={styles.contactCardsContainer}>
+    <section className={styles.section} id="contact">
+      <header className={styles.header}>
+        <h2 className={styles.title}>
+          <span className={styles.titleIndex}>03.</span>Contact
+        </h2>
+        <p className={styles.subtitle}>{CONTACT_INFO.description}</p>
+      </header>
+
+      <ul className={styles.list}>
         {CONTACT_INFO.contactMethods.map((method) => (
-          <div key={method.id} className={styles.contactCard}>
-            <a 
-              href={method.link} 
-              className={styles.contactCardLink} 
-              aria-label={method.title} 
-              target="_blank" 
+          <li key={method.id} className={styles.item}>
+            <span className={styles.itemLabel}>{method.title}</span>
+            <a
+              href={method.link}
+              className={styles.itemLink}
+              target="_blank"
               rel="noopener noreferrer"
             >
-              <i className={`fab ${method.icon} ${styles.contactIcon}`}></i>
-              <span className={styles.contactValue}>{method.value}</span>
+              <span className={styles.itemValue}>{method.value}</span>
+              <span className={styles.itemArrow} aria-hidden="true">
+                ↗
+              </span>
             </a>
-          </div>
+          </li>
         ))}
-      </div>
-      
-      <div className={styles.contactMessage}>
-        <p>{CONTACT_INFO.closing}</p>
-      </div>
+      </ul>
+
+      <p className={styles.footer}>{CONTACT_INFO.closing}</p>
     </section>
   );
 };
