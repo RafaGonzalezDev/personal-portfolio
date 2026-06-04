@@ -1,45 +1,31 @@
 import styles from '@/styles/Home.module.css';
-import profileImage from '@/assets/rafa.png';
 import { PROFESSIONAL_SUMMARY } from '@/constants';
 import { parseHighlight } from '@/utils';
 
-/**
- * Home - Sección de presentación principal
- * 
- * Componente que renderiza la sección hero del portfolio con información personal,
- * descripción profesional y foto de perfil. Es la primera sección visible.
- * 
- * @component
- * @example
- * return (
- *   <Home />
- * )
- * 
- * @features
- * - Presentación personal con nombre y título
- * - Descripción profesional destacando habilidades clave
- * - Imagen de perfil optimizada
- * - Layout responsive de dos columnas
- * - Texto con énfasis en palabras clave
- */
 const Home = () => {
   return (
-    <div className={`${styles.container}`} id="home">
-      <div className={styles.leftContainer}>
-        <h1 className={styles.title}>{PROFESSIONAL_SUMMARY.name}</h1>
-        <h2 className={styles.subtitle}>{PROFESSIONAL_SUMMARY.title}</h2>
-        <p className={styles.description}>
+    <section className={styles.section} id="home">
+      <p className={styles.eyebrow}>
+        <span className={styles.eyebrowPrompt}>$</span> whoami
+      </p>
+      <h1 className={styles.name}>{PROFESSIONAL_SUMMARY.name}</h1>
+      <p className={styles.role}>
+        <span className={styles.roleLabel}>Frontend Engineer</span>
+        <span className={styles.roleDivider}>·</span>
+        <span className={styles.roleFocus}>AI Developer Tooling</span>
+      </p>
+      <div className={styles.bio}>
+        <p className={styles.lead}>
           {parseHighlight(PROFESSIONAL_SUMMARY.description)}
         </p>
-        <p className={styles.description}>
-          I enjoy turning <strong>complex ideas</strong> into <strong>elegant user experiences</strong> using <strong>modern technologies</strong> and a <strong>pragmatic</strong> approach to
-          development.
+        <p className={styles.muted}>
+          I work in enterprise banking environments, applying{' '}
+          <strong>agentic workflows</strong>, <strong>MCP</strong>,{' '}
+          <strong>Playwright</strong> and local LLM inference to accelerate
+          technical analysis, testing, documentation and delivery.
         </p>
       </div>
-      <div className={styles.rightContainer}>
-        <img src={profileImage} alt="Profile" className={styles.profileImage} />
-      </div>
-    </div>
+    </section>
   );
 };
 

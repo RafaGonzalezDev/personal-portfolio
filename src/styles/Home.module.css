@@ -1,100 +1,67 @@
-/* ===== LAYOUT ===== */
-.container {
+.section {
+  padding-top: var(--space-8);
+  max-width: var(--max-width);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+  color: var(--text-faint);
+  margin-bottom: var(--space-5);
+}
+
+.eyebrowPrompt {
+  color: var(--accent);
+}
+
+.name {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--tracking-tighter);
+  color: var(--text);
+  margin-bottom: var(--space-3);
+}
+
+.role {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: var(--spacing-2xl);
-  padding: 0;
   flex-wrap: wrap;
-  min-width: 0;
-  overflow-x: hidden;
-  margin-bottom: var(--section-spacing-block);
+  align-items: baseline;
+  gap: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-base);
+  color: var(--text-muted);
+  margin-bottom: var(--space-6);
 }
 
-/* ===== PROFILE IMAGE ===== */
-.profileImage {
-  width: 100%;
-  max-width: var(--home-image-max-width);
-  height: auto;
-  border-radius: 50%;
-  margin: 0 auto;
-  z-index: var(--z-dropdown);
+.roleLabel {
+  color: var(--text);
 }
 
-/* ===== TYPOGRAPHY ===== */
-.title {
-  font-size: var(--font-size-icon-large);
-  font-weight: 600;
-  color: var(--primary-text-color);
+.roleDivider {
+  color: var(--text-faint);
 }
 
-.subtitle {
-  font-size: var(--font-size-subtitle);
-  font-weight: 400;
-  color: var(--secondary-text-color);
-  margin: 0;
+.roleFocus {
+  color: var(--accent);
 }
 
-/* ===== CONTENT CONTAINERS ===== */
-.leftContainer {
-  flex: 1;
-  flex-basis: 50%;
-  min-width: 0;
-}
-
-.rightContainer {
-  flex: 1;
-  flex-basis: 40%;
-  min-width: 0;
+.bio {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  gap: var(--space-4);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  max-width: var(--max-width);
 }
 
-/* ===== DESCRIPTION ===== */
-.description {
-  font-size: var(--font-size);
-  line-height: 1.6;
-  margin-top: var(--spacing-md);
-  color: var(--secondary-text-color);
+.lead {
+  color: var(--text-muted);
 }
 
-/* ===== TECH STACK ===== */
-.techStackSection {
-  width: 100%;
-  margin-top: var(--spacing-2xl);
-}
-
-.techStackTitle {
-  font-size: var(--font-size-icon-medium);
-  font-weight: var(--font-weight-medium);
-  color: var(--primary-text-color);
-  margin-bottom: var(--spacing-sm);
-  text-align: center;
-}
-
-/* ===== RESPONSIVE ===== */
-@media screen and (max-width: 768px) {
-  .container {
-    flex-direction: column-reverse;
-    align-items: center;
-    gap: var(--spacing-xl);
-    margin-top: var(--spacing-md);
-    margin-bottom: var(--section-spacing-block);
-  }
-  
-  .profileImage {
-    display: block;
-    width: 100%;
-    margin-bottom: var(--spacing-md);
-  }
-  
-  .leftContainer, .rightContainer {
-    min-width: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+.muted {
+  color: var(--text-muted);
 }
