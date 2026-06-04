@@ -2,29 +2,10 @@ import { useState, useEffect, useRef } from 'react';
 import styles from '@/styles/Navbar.module.css';
 import { NAVBAR_ITEMS } from '@/constants';
 
-/**
- * Navbar - Componente de navegación principal
- * 
- * Renderiza una barra de navegación horizontal con enlaces a las diferentes secciones
- * del portfolio. Incluye funcionalidad de scroll suave y estado activo.
- * 
- * @component
- * @example
- * return (
- *   <Navbar />
- * )
- * 
- * @features
- * - Navegación suave entre secciones
- * - Estado activo visual del enlace actual
- * - Animación AOS al cargar
- * - Responsive design
- */
 const Navbar = () => {
   const [activeItem, setActiveItem] = useState('home');
   const sectionRefs = useRef({});
-  
-  // Inicializar refs
+
   useEffect(() => {
     NAVBAR_ITEMS.forEach((item) => {
       sectionRefs.current[item.id] = document.getElementById(item.id);
@@ -45,28 +26,26 @@ const Navbar = () => {
     const updateActiveSection = () => {
       frameId = null;
       const viewportPoint = window.innerHeight * 0.35;
-       let nextActiveId = null;
-       let found = false;
+      let nextActiveId = null;
+      let found = false;
 
-       sectionElements.forEach((section) => {
-         const rect = section.getBoundingClientRect();
-         if (rect.top <= viewportPoint && rect.bottom >= viewportPoint) {
-           nextActiveId = section.id;
-           found = true;
-         }
-       });
+      sectionElements.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= viewportPoint && rect.bottom >= viewportPoint) {
+          nextActiveId = section.id;
+          found = true;
+        }
+      });
 
-       if (!found) {
-         const lastSection = sectionElements[sectionElements.length - 1];
-         if (lastSection) {
-           const lastRect = lastSection.getBoundingClientRect();
-           if (lastRect.top <= viewportPoint) {
-             nextActiveId = lastSection.id;
-           }
-         }
-       }
-
-
+      if (!found) {
+        const lastSection = sectionElements[sectionElements.length - 1];
+        if (lastSection) {
+          const lastRect = lastSection.getBoundingClientRect();
+          if (lastRect.top <= viewportPoint) {
+            nextActiveId = lastSection.id;
+          }
+        }
+      }
 
       if (window.scrollY <= 0) {
         nextActiveId = sectionElements[0].id;
@@ -78,9 +57,9 @@ const Navbar = () => {
         nextActiveId = sectionElements[sectionElements.length - 1].id;
       }
 
-       if (nextActiveId !== null) {
-         setActiveItem((prev) => (prev === nextActiveId ? prev : nextActiveId));
-       }
+      if (nextActiveId !== null) {
+        setActiveItem((prev) => (prev === nextActiveId ? prev : nextActiveId));
+      }
     };
 
     const handleScroll = () => {
@@ -115,26 +94,40 @@ const Navbar = () => {
     }
   };
 
-
   return (
-    <div data-aos="fade-in" data-aos-delay="100" className={styles.navbar}>
-      <ul className={styles.unorderedList}>
-        {NAVBAR_ITEMS.map((item) => (
-          <li key={item.id} className={styles.listItem}>
-            <a
-              href={`#${item.id}`}
-              className={`${styles.navLink} ${activeItem === item.id ? styles.activeLink : ''}`}
-              onClick={(e) => {
-                e.preventDefault(); // Prevenir el comportamiento predeterminado del enlace
-                handleClick(item.id);
-              }}
-            >
-              {item.label}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <nav className={styles.nav}>
+      <div className={styles.inner}>
+        <a
+          href="#home"
+          className={styles.brand}
+          onClick={(e) => {
+            e.preventDefault();
+            handleClick('home');
+          }}
+        >
+          <span className={styles.brandMark}>~/</span>
+          <span className={styles.brandName}>rafa</span>
+        </a>
+        <ul className={styles.list}>
+          {NAVBAR_ITEMS.map((item) => (
+            <li key={item.id}>
+              <a
+                href={`#${item.id}`}
+                className={`${styles.link} ${
+                  activeItem === item.id ? styles.linkActive : ''
+                }`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleClick(item.id);
+                }}
+              >
+                {item.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </nav>
   );
 };
 
