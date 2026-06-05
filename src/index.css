@@ -79,26 +79,27 @@ strong {
 
 ::selection {
   background-color: var(--accent);
-  color: var(--bg);
+  color: var(--accent-fg);
 }
 
 /* ============================================================
    TYPOGRAPHY PATTERNS
    ------------------------------------------------------------
-   These are the canonical compositions of the design tokens
-   used across the portfolio. New components should follow
-   these recipes to keep the visual language consistent.
+   Canonical compositions of the design tokens used across the
+   portfolio. New components should follow these recipes to
+   keep the visual language consistent.
 
-   Display (hero name)  :  font-sans · font-size-4xl · font-weight-bold       · text
-   Section title        :  font-sans · font-size-2xl · font-weight-semibold  · text
-   Section index (01.)  :  font-mono · font-size-base · font-weight-medium   · accent
-   Section subtitle     :  font-sans · font-size-base · font-weight-regular  · text-muted
-   Card heading         :  font-sans · font-size-lg   · font-weight-semibold · text
-   Accent label         :  font-mono · font-weight-medium                    · accent
-   Body (lead)          :  font-sans · font-size-base · font-weight-regular  · text-muted
-   Body (paragraph)     :  font-sans · font-size-base · font-weight-regular  · text-muted
-   Strong (inline)      :  inherits color · font-weight-medium              (global rule)
-   Meta (date, label)   :  font-mono · font-size-xs/sm · font-weight-regular · text-faint
+   Display (hero name)        :  font-sans · font-size-display · font-weight-bold    · text
+   Section title              :  font-sans · font-size-3xl · font-weight-semibold   · text
+   Section index (01)         :  font-mono · font-size-sm · font-weight-medium      · accent
+   Section eyebrow            :  font-mono · font-size-xs · font-weight-medium      · text-faint
+   Card heading               :  font-sans · font-size-lg · font-weight-semibold   · text
+   Accent label               :  font-mono · font-weight-medium                     · accent
+   Body (lead)                :  font-sans · font-size-lg · font-weight-regular     · text-muted
+   Body (paragraph)           :  font-sans · font-size-base · font-weight-regular   · text-muted
+   Strong (inline)            :  inherits color · font-weight-medium               (global rule)
+   Meta (date, label)         :  font-mono · font-size-xs/sm · font-weight-regular  · text-faint
+   Numeric tabular            :  font-mono · font-variant-numeric: tabular-nums    · text-faint
    ============================================================ */
 
 /* ============================================================
@@ -115,9 +116,10 @@ strong {
   --font-size-base: 0.9375rem;
   --font-size-lg: 1rem;
   --font-size-xl: 1.125rem;
-  --font-size-2xl: 1.375rem;
-  --font-size-3xl: 1.75rem;
-  --font-size-4xl: 2.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 2rem;
+  --font-size-4xl: 2.75rem;
+  --font-size-display: clamp(2.5rem, 5.5vw, 4.5rem);
 
   /* ---- Type: weights ---- */
   --font-weight-regular: 400;
@@ -126,16 +128,18 @@ strong {
   --font-weight-bold: 700;
 
   /* ---- Type: line height ---- */
-  --line-height-tight: 1.2;
+  --line-height-tight: 1.05;
+  --line-height-snug: 1.2;
   --line-height-normal: 1.6;
   --line-height-relaxed: 1.75;
 
   /* ---- Type: tracking ---- */
-  --tracking-tighter: -0.02em;
-  --tracking-tight: -0.01em;
+  --tracking-tighter: -0.04em;
+  --tracking-tight: -0.02em;
   --tracking-snug: -0.005em;
   --tracking-normal: 0;
   --tracking-wide: 0.02em;
+  --tracking-widest: 0.12em;
 
   /* ---- Spacing (4pt base) ---- */
   --space-1: 0.25rem;
@@ -148,6 +152,7 @@ strong {
   --space-8: 4rem;
   --space-9: 6rem;
   --space-10: 8rem;
+  --space-11: 12rem;
 
   /* ---- Radius ---- */
   --radius-sm: var(--space-1);
@@ -160,6 +165,7 @@ strong {
   --border-thick-width: 2px;
   --border-thin: var(--border-width) solid var(--border);
   --border-thick: var(--border-thick-width) solid var(--border-strong);
+  --hairline: 1px solid var(--border);
 
   /* ---- Outline (focus) ---- */
   --outline-width: 2px;
@@ -167,49 +173,63 @@ strong {
 
   /* ---- Layout ---- */
   --max-width: 68ch;
-  --max-width-wide: 96ch;
+  --max-width-wide: 80rem;
   --max-width-narrow: 52ch;
-  --inline-padding: var(--space-5);
-  --section-gap: var(--space-9);
+  --inline-padding: var(--space-6);
+  --section-gap: var(--space-10);
+  --grid-columns: 12;
+  --grid-gutter: var(--space-5);
+  --grid-track: 1fr;
+  --sidebar-width: 14rem;
+  --size-meta-column: 12rem;
 
   /* ---- Sizes (semantic) ---- */
   --size-control-sm: 1.75rem;
-  --size-timeline-dot: 0.5625rem;
-  --size-timeline-line: var(--border-width);
-  --size-indicator: 0.625rem;
+  --size-indicator: 0.5rem;
+  --size-rule: 1px;
+  --size-status-dot: 0.4375rem;
   --size-grid-index: var(--space-7);
 
   /* ---- Backdrop ---- */
-  --blur-surface: 8px;
+  --blur-surface: 10px;
   --backdrop-nav: saturate(180%) blur(var(--blur-surface));
 
   /* ---- Motion ---- */
   --ease: cubic-bezier(0.2, 0.6, 0.2, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --duration-fast: 120ms;
   --duration-base: 200ms;
   --duration-slow: 320ms;
+  --duration-slower: 600ms;
   --hover-lift: 2px;
+  --pulse-period: 2.4s;
 
   /* ---- Z-index ---- */
   --z-nav: 100;
   --z-overlay: 200;
+
+  /* ---- Surface textures ---- */
+  --grid-line-color: rgba(255, 255, 255, 0.04);
+  --dot-color: rgba(255, 255, 255, 0.06);
 }
 
 /* ============================================================
-   THEME — DARK
+   THEME — DARK EDITORIAL
    ============================================================ */
 :root {
-  --bg: #0a0a0a;
-  --bg-elevated: #111111;
-  --bg-subtle: #161616;
-  --text: #ededed;
-  --text-muted: #8a8a8a;
-  --text-faint: #5a5a5a;
-  --border: #1f1f1f;
-  --border-strong: #2a2a2a;
-  --accent: #4ade80;
-  --accent-soft: rgba(74, 222, 128, 0.12);
-  --accent-fg: #0a0a0a;
+  --bg: #0c0c0d;
+  --bg-elevated: #131314;
+  --bg-subtle: #181819;
+  --text: #f2efe8;
+  --text-muted: #9b978c;
+  --text-faint: #57564f;
+  --border: #232220;
+  --border-strong: #34322d;
+  --accent: #c5e063;
+  --accent-soft: rgba(197, 224, 99, 0.14);
+  --accent-fg: #0c0c0d;
+  --highlight: #f2efe8;
+  --pulse: rgba(197, 224, 99, 0.65);
 }
 
 /* ============================================================
@@ -217,15 +237,37 @@ strong {
    ============================================================ */
 @media (max-width: 768px) {
   :root {
-    --font-size-3xl: 1.5rem;
-    --font-size-4xl: 1.875rem;
+    --font-size-3xl: 1.625rem;
+    --font-size-4xl: 2.125rem;
+    --font-size-display: clamp(2.25rem, 10vw, 3.5rem);
     --inline-padding: var(--space-4);
-    --section-gap: var(--space-7);
+    --section-gap: var(--space-8);
+    --grid-gutter: var(--space-4);
+    --size-meta-column: 100%;
   }
 }
 
 /* ============================================================
-   UTILITIES
+   DECORATIVE BACKGROUND
+   ------------------------------------------------------------
+   Subtle dot grid + hairline column guides. Used by the main
+   container and large sections to anchor the editorial grid.
+   ============================================================ */
+.bg-dots {
+  background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
+  background-size: 24px 24px;
+  background-position: 0 0;
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(to right, var(--grid-line-color) var(--size-rule), transparent var(--size-rule)),
+    linear-gradient(to bottom, var(--grid-line-color) var(--size-rule), transparent var(--size-rule));
+  background-size: calc(100% / var(--grid-columns)) 6rem;
+}
+
+/* ============================================================
+   UTILITIES — TYPOGRAPHY
    ============================================================ */
 .mono {
   font-family: var(--font-mono);
@@ -233,4 +275,126 @@ strong {
 
 .muted {
   color: var(--text-muted);
+}
+
+.faint {
+  color: var(--text-faint);
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.display {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-display);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--tracking-tighter);
+  color: var(--text);
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-faint);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-widest);
+}
+
+.eyebrow-accent {
+  color: var(--accent);
+}
+
+.numeric {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  color: var(--text-faint);
+}
+
+.rule {
+  display: block;
+  width: 100%;
+  height: 0;
+  border: 0;
+  border-top: var(--hairline);
+  margin: 0;
+}
+
+.rule-strong {
+  border-top: 1px solid var(--border-strong);
+}
+
+/* ============================================================
+   UTILITIES — LAYOUT
+   ============================================================ */
+.stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.stack-1 { gap: var(--space-1); }
+.stack-2 { gap: var(--space-2); }
+.stack-3 { gap: var(--space-3); }
+.stack-4 { gap: var(--space-4); }
+.stack-5 { gap: var(--space-5); }
+.stack-6 { gap: var(--space-6); }
+.stack-7 { gap: var(--space-7); }
+.stack-8 { gap: var(--space-8); }
+
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.divider-dot::before {
+  content: '·';
+  margin: 0 var(--space-2);
+  color: var(--text-faint);
+}
+
+/* ============================================================
+   UTILITIES — STATE
+   ============================================================ */
+.status-dot {
+  display: inline-block;
+  width: var(--size-status-dot);
+  height: var(--size-status-dot);
+  border-radius: var(--radius-pill);
+  background-color: var(--accent);
+  position: relative;
+  flex-shrink: 0;
+}
+
+.status-dot::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: var(--radius-pill);
+  background-color: var(--pulse);
+  opacity: 0;
+  animation: pulse var(--pulse-period) var(--ease-out) infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+/* ============================================================
+   UTILITIES — FOCUS
+   ============================================================ */
+:focus-visible {
+  outline: var(--outline-width) solid var(--accent);
+  outline-offset: var(--outline-offset);
+  border-radius: var(--radius-sm);
 }
