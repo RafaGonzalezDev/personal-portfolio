@@ -1,6 +1,17 @@
 .section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-7);
   padding-top: var(--space-9);
-  padding-bottom: var(--space-6);
+  padding-bottom: var(--space-7);
+}
+
+/* ---- Head ---- */
+.head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
 }
 
 .eyebrow {
@@ -10,7 +21,7 @@
   font-family: var(--font-mono);
   font-size: var(--font-size-sm);
   color: var(--text-faint);
-  margin-bottom: var(--space-5);
+  letter-spacing: var(--tracking-wide);
 }
 
 .eyebrowPrompt {
@@ -18,23 +29,34 @@
 }
 
 .name {
-  font-size: var(--font-size-4xl);
+  font-size: var(--font-size-display);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
   letter-spacing: var(--tracking-tighter);
   color: var(--text);
-  margin-bottom: var(--space-4);
 }
 
-.role {
+.nameLine {
+  display: block;
+}
+
+/* ---- Body ---- */
+.body {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: var(--space-7);
+  align-items: start;
+}
+
+.roleLine {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  gap: var(--space-2);
+  gap: var(--space-3);
   font-family: var(--font-mono);
-  font-size: var(--font-size-base);
-  color: var(--text-muted);
-  margin-bottom: var(--space-7);
+  font-size: var(--font-size-sm);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
 }
 
 .roleLabel {
@@ -49,14 +71,44 @@
   color: var(--accent);
 }
 
-.bio {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-5);
+.lead {
   font-size: var(--font-size-lg);
   line-height: var(--line-height-relaxed);
+  color: var(--text-muted);
+  max-width: 52ch;
 }
 
-.lead {
+/* ---- Status pill ---- */
+.status {
+  grid-column: 1 / -1;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) 0;
+  border-top: var(--hairline);
+  border-bottom: var(--hairline);
+  width: 100%;
+}
+
+.statusText {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
   color: var(--text-muted);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+}
+
+.statusCompany {
+  color: var(--text);
+  margin-left: var(--space-1);
+}
+
+@media (max-width: 768px) {
+  .body {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+  .lead {
+    font-size: var(--font-size-base);
+  }
 }
