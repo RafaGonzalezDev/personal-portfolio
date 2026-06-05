@@ -10,10 +10,10 @@ const MainLayout = ({ children }) => {
       {children}
       <footer className={styles.footer}>
         <span className={styles.footerText}>
-          © {year} · Rafa González Rubio
+          © {year} · Rafa González Rubio · Córdoba
         </span>
         <span className={styles.footerMeta}>
-          Madrid · Built with React
+          Built with React
         </span>
       </footer>
     </div>

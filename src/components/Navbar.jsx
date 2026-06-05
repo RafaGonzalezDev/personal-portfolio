@@ -99,17 +99,6 @@ const Navbar = () => {
   return (
     <nav className={styles.nav} aria-label="Primary">
       <div className={styles.inner}>
-        <a
-          href="#home"
-          className={styles.brand}
-          onClick={(e) => {
-            e.preventDefault();
-            handleClick('home');
-          }}
-        >
-          <span className={styles.brandMark}>R</span>
-          <span className={styles.brandName}>Rafa González</span>
-        </a>
         <ul className={styles.list}>
           {NAVBAR_ITEMS.map((item, index) => (
             <li key={item.id} className={styles.item}>
