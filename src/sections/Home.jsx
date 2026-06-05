@@ -29,12 +29,12 @@ const Home = () => {
           />
           <div className={styles.identityText}>
             <p className={styles.name}>{PROFESSIONAL_SUMMARY.name}</p>
-            <p className={styles.identityMeta}>Madrid · Software Developer</p>
+            <p className={styles.identityMeta}>Córdoba · Software Engineer</p>
           </div>
         </div>
 
         <h1 className={styles.title}>
-          Software developer building frontend systems and the tooling behind them.
+          Software Engineer building frontend systems and the tooling behind them.
         </h1>
       </div>
 
