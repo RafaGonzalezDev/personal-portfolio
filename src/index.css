@@ -92,7 +92,7 @@ strong {
    Display (hero name)        :  font-sans · font-size-display · font-weight-bold    · text
    Section title              :  font-sans · font-size-3xl · font-weight-semibold   · text
    Section index (01)         :  font-mono · font-size-sm · font-weight-medium      · accent
-   Section eyebrow            :  font-mono · font-size-xs · font-weight-medium      · text-faint
+   Section eyebrow            :  font-mono · font-size-base · font-weight-medium     · text-faint
    Card heading               :  font-sans · font-size-lg · font-weight-semibold   · text
    Accent label               :  font-mono · font-weight-medium                     · accent
    Body (lead)                :  font-sans · font-size-lg · font-weight-regular     · text-muted
@@ -296,7 +296,7 @@ strong {
 
 .eyebrow {
   font-family: var(--font-mono);
-  font-size: var(--font-size-xs);
+  font-size: var(--font-size-base);
   font-weight: var(--font-weight-medium);
   color: var(--text-faint);
   text-transform: uppercase;

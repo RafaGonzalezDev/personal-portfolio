@@ -79,32 +79,33 @@ const Experience = () => {
             key={`${experience.company}-${experience.role}-${experience.start.month}-${experience.start.year}`}
             className={styles.item}
           >
-            <header className={styles.itemHead}>
-              <div className={styles.titleLine}>
-                <h3 className={styles.company}>{experience.company}</h3>
-                <p className={styles.role}>{experience.role}</p>
-              </div>
-              <div className={styles.metaLine}>
-                <span>{formatExperienceDate(experience)}</span>
-                <span className={styles.metaDot} aria-hidden="true">·</span>
-                <span>{formatDuration(experience.start, experience.end)}</span>
-                {experience.location ? (
-                  <>
-                    <span className={styles.metaDot} aria-hidden="true">·</span>
-                    <span>{experience.location}</span>
-                  </>
-                ) : null}
-                {experience.isCurrent ? (
-                  <span className={styles.badge}>
-                    <span className="status-dot" aria-hidden="true" />
-                    Current
-                  </span>
-                ) : null}
-              </div>
-            </header>
+            <aside className={styles.timelineMeta} aria-label="Experience period">
+              <span className={styles.timelineDate}>{formatExperienceDate(experience)}</span>
+              <span className={styles.timelineDuration}>{formatDuration(experience.start, experience.end)}</span>
+            </aside>
 
-            <div className={styles.itemBody}>
-              {formatDescription(experience.description)}
+            <span className={styles.timelineMarker} aria-hidden="true" />
+
+            <div className={styles.itemCard}>
+              <header className={styles.itemHead}>
+                <div className={styles.titleLine}>
+                  <h3 className={styles.company}>{experience.company}</h3>
+                  <p className={styles.role}>{experience.role}</p>
+                </div>
+                <div className={styles.metaLine}>
+                  {experience.location ? <span>{experience.location}</span> : null}
+                  {experience.isCurrent ? (
+                    <span className={styles.badge}>
+                      <span className="status-dot" aria-hidden="true" />
+                      Current
+                    </span>
+                  ) : null}
+                </div>
+              </header>
+
+              <div className={styles.itemBody}>
+                {formatDescription(experience.description)}
+              </div>
             </div>
           </li>
         ))}

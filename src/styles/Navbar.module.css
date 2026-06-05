@@ -11,46 +11,11 @@
 .inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: var(--space-5);
   max-width: var(--max-width-wide);
   margin: 0 auto;
   padding: var(--space-4) var(--inline-padding);
-}
-
-/* ---- Brand ---- */
-.brand {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-3);
-  color: var(--text);
-  transition: color var(--duration-base) var(--ease);
-}
-
-.brandMark {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 1.625rem;
-  height: 1.625rem;
-  border: var(--hairline);
-  border-radius: var(--radius-pill);
-  font-family: var(--font-mono);
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-semibold);
-  color: var(--accent);
-  letter-spacing: 0;
-}
-
-.brandName {
-  font-family: var(--font-sans);
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-medium);
-  letter-spacing: var(--tracking-tight);
-}
-
-.brand:hover .brandName {
-  color: var(--accent);
 }
 
 /* ---- Menu ---- */
@@ -118,9 +83,7 @@
 
 @media (max-width: 640px) {
   .inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--space-3);
+    align-items: center;
     padding: var(--space-3) var(--inline-padding);
   }
   .list {
