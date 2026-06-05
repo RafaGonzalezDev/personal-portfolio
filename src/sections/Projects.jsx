@@ -1,50 +1,56 @@
 import React from 'react';
 import styles from '@/styles/Projects.module.css';
-import Divider from '@/components/Divider/Divider';
 import { PROJECTS } from '@/constants';
 
-const ProjectRow = React.memo(({ project, index }) => {
-  const indexLabel = String(index + 1).padStart(2, '0');
+const ProjectCard = React.memo(({ project }) => {
   return (
-    <article className={styles.row}>
-      <div className={styles.titleLine}>
-        <h3 className={styles.projectTitle}>
-          <a
-            href={project.githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.titleLink}
-          >
-            {project.title}
-          </a>
+    <article className={styles.card}>
+      <header className={styles.cardHead}>
+        <h3 className={styles.cardTitle}>
+          {project.githubUrl ? (
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.cardTitleLink}
+            >
+              {project.title}
+            </a>
+          ) : (
+            project.title
+          )}
         </h3>
-        {project.githubUrl && (
-          <a
-            href={project.githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.externalLink}
-            aria-label={`View ${project.title} on GitHub`}
-          >
-            <span aria-hidden="true">↗</span>
-          </a>
-        )}
-      </div>
+        <p className={styles.cardMeta}>
+          <span>{project.year}</span>
+          <span className={styles.metaDot} aria-hidden="true">·</span>
+          <span className={styles.cardCategory}>{project.category}</span>
+          {project.githubUrl ? (
+            <>
+              <span className={styles.metaDot} aria-hidden="true">·</span>
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.cardLink}
+                aria-label={`Open ${project.title} on GitHub`}
+              >
+                <span className={styles.cardLinkLabel}>View repo</span>
+                <span className={styles.cardLinkArrow} aria-hidden="true">↗</span>
+              </a>
+            </>
+          ) : null}
+        </p>
+      </header>
 
-      <p className={styles.meta}>
-        <span className={styles.index}>{indexLabel}</span>
-        {' · '}
-        <span className={styles.year}>{project.year}</span>
-        {' · '}
-        <span className={styles.category}>{project.category}</span>
-      </p>
+      <p className={styles.cardDescription}>{project.description}</p>
 
-      <p className={styles.description}>{project.description}</p>
-
-      <ul className={styles.tags}>
-        {project.technologies.map((tech) => (
+      <ul className={styles.cardTags}>
+        {project.technologies.map((tech, techIndex) => (
           <li key={tech} className={styles.tag}>
-            {tech}
+            <span>{tech}</span>
+            {techIndex < project.technologies.length - 1 ? (
+              <span className={styles.tagDot} aria-hidden="true">·</span>
+            ) : null}
           </li>
         ))}
       </ul>
@@ -52,29 +58,25 @@ const ProjectRow = React.memo(({ project, index }) => {
   );
 });
 
-ProjectRow.displayName = 'ProjectRow';
+ProjectCard.displayName = 'ProjectCard';
 
 const Projects = () => {
   return (
     <section className={styles.section} id="projects">
       <header className={styles.header}>
+        <div className={styles.headerTop}>
+          <span className={styles.headerIndex} aria-hidden="true">02</span>
+          <p className={styles.eyebrow}>Projects</p>
+        </div>
         <h2 className={styles.sectionTitle}>
-          <span className={styles.titleIndex}>02.</span>Projects
+          Selected work on AI developer tooling, agentic workflows
+          <span className={styles.sectionTitleAccent}> and frontend automation.</span>
         </h2>
-        <p className={styles.subtitle}>
-          Selected work on AI developer tooling, agentic workflows and frontend
-          automation.
-        </p>
       </header>
 
-      <div className={styles.list}>
-        {PROJECTS.map((project, index) => (
-          <React.Fragment key={project.id}>
-            <ProjectRow project={project} index={index} />
-            {(index + 1) % 2 === 0 && index < PROJECTS.length - 1 && (
-              <Divider />
-            )}
-          </React.Fragment>
+      <div className={styles.grid}>
+        {PROJECTS.map((project) => (
+          <ProjectCard key={project.id} project={project} />
         ))}
       </div>
     </section>
