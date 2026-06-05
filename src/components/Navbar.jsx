@@ -2,8 +2,10 @@ import { useState, useEffect, useRef } from 'react';
 import styles from '@/styles/Navbar.module.css';
 import { NAVBAR_ITEMS } from '@/constants';
 
+const formatIndex = (index) => String(index + 1).padStart(2, '0');
+
 const Navbar = () => {
-  const [activeItem, setActiveItem] = useState('home');
+  const [activeItem, setActiveItem] = useState(NAVBAR_ITEMS[0]?.id ?? 'home');
   const sectionRefs = useRef({});
 
   useEffect(() => {
@@ -95,7 +97,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={styles.nav}>
+    <nav className={styles.nav} aria-label="Primary">
       <div className={styles.inner}>
         <a
           href="#home"
@@ -105,12 +107,12 @@ const Navbar = () => {
             handleClick('home');
           }}
         >
-          <span className={styles.brandMark}>~/</span>
-          <span className={styles.brandName}>rafa</span>
+          <span className={styles.brandMark}>R</span>
+          <span className={styles.brandName}>Rafa González</span>
         </a>
         <ul className={styles.list}>
-          {NAVBAR_ITEMS.map((item) => (
-            <li key={item.id}>
+          {NAVBAR_ITEMS.map((item, index) => (
+            <li key={item.id} className={styles.item}>
               <a
                 href={`#${item.id}`}
                 className={`${styles.link} ${
@@ -120,8 +122,10 @@ const Navbar = () => {
                   e.preventDefault();
                   handleClick(item.id);
                 }}
+                aria-current={activeItem === item.id ? 'true' : undefined}
               >
-                {item.label}
+                <span className={styles.linkIndex}>{formatIndex(index)}</span>
+                <span className={styles.linkLabel}>{item.label}</span>
               </a>
             </li>
           ))}
