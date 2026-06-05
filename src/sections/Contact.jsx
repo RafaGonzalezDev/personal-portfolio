@@ -6,8 +6,13 @@ const Contact = () => {
   return (
     <section className={styles.section} id="contact">
       <header className={styles.header}>
-        <h2 className={styles.title}>
-          <span className={styles.titleIndex}>03.</span>Contact
+        <div className={styles.headerTop}>
+          <span className={styles.headerIndex} aria-hidden="true">03</span>
+          <p className={styles.eyebrow}>Contact</p>
+        </div>
+        <h2 className={styles.sectionTitle}>
+          Let&rsquo;s build something
+          <span className={styles.sectionTitleAccent}> useful.</span>
         </h2>
         <p className={styles.subtitle}>{CONTACT_INFO.description}</p>
       </header>
