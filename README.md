@@ -2,7 +2,7 @@
 
 A minimal personal portfolio built with React and Vite, focused on frontend architecture, production systems and developer tooling.
 
-![Portfolio Preview](./public/preview-v2.png)
+![Portfolio Preview](./public/preview-v3.png)
 
 ## Features
 
