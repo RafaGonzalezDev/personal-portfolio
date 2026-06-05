@@ -1,45 +1,57 @@
 import styles from '@/styles/Home.module.css';
-import profileImage from '@/assets/rafa.png';
-import { PROFESSIONAL_SUMMARY } from '@/constants';
+import { PROFESSIONAL_SUMMARY, EXPERIENCES } from '@/constants';
 import { parseHighlight } from '@/utils';
 
-/**
- * Home - Sección de presentación principal
- * 
- * Componente que renderiza la sección hero del portfolio con información personal,
- * descripción profesional y foto de perfil. Es la primera sección visible.
- * 
- * @component
- * @example
- * return (
- *   <Home />
- * )
- * 
- * @features
- * - Presentación personal con nombre y título
- * - Descripción profesional destacando habilidades clave
- * - Imagen de perfil optimizada
- * - Layout responsive de dos columnas
- * - Texto con énfasis en palabras clave
- */
 const Home = () => {
+  const currentExperience = EXPERIENCES.find((experience) => experience.isCurrent);
+  const nameParts = PROFESSIONAL_SUMMARY.name.split(' ');
+
   return (
-    <div className={`${styles.container}`} id="home">
-      <div className={styles.leftContainer}>
-        <h1 className={styles.title}>{PROFESSIONAL_SUMMARY.name}</h1>
-        <h2 className={styles.subtitle}>{PROFESSIONAL_SUMMARY.title}</h2>
-        <p className={styles.description}>
+    <section className={styles.section} id="home">
+      <div className={styles.head}>
+        <p className={styles.eyebrow}>
+          <span className={styles.eyebrowPrompt}>$</span>
+          <span>whoami</span>
+        </p>
+
+        <h1 className={styles.name}>
+          {nameParts.map((part, index) => (
+            <span key={part} className={styles.nameLine}>
+              {part}
+              {index < nameParts.length - 1 ? <br /> : null}
+            </span>
+          ))}
+        </h1>
+      </div>
+
+      <div className={styles.body}>
+        <div className={styles.roleLine}>
+          <span className={styles.roleLabel}>
+            {PROFESSIONAL_SUMMARY.title}
+          </span>
+          <span className={styles.roleDivider} aria-hidden="true">
+            /
+          </span>
+          <span className={styles.roleFocus}>AI Developer Tooling</span>
+        </div>
+
+        <p className={styles.lead}>
           {parseHighlight(PROFESSIONAL_SUMMARY.description)}
         </p>
-        <p className={styles.description}>
-          I enjoy turning <strong>complex ideas</strong> into <strong>elegant user experiences</strong> using <strong>modern technologies</strong> and a <strong>pragmatic</strong> approach to
-          development.
-        </p>
+
+        {currentExperience ? (
+          <div className={styles.status}>
+            <span className="status-dot" aria-hidden="true" />
+            <span className={styles.statusText}>
+              Currently {currentExperience.role.toLowerCase()} at{' '}
+              <span className={styles.statusCompany}>
+                {currentExperience.company}
+              </span>
+            </span>
+          </div>
+        ) : null}
       </div>
-      <div className={styles.rightContainer}>
-        <img src={profileImage} alt="Profile" className={styles.profileImage} />
-      </div>
-    </div>
+    </section>
   );
 };
 

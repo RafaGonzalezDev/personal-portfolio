@@ -1,100 +1,114 @@
-/* ===== LAYOUT ===== */
-.container {
+.section {
+  position: relative;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: var(--spacing-2xl);
-  padding: 0;
+  flex-direction: column;
+  gap: var(--space-7);
+  padding-top: var(--space-9);
+  padding-bottom: var(--space-7);
+}
+
+/* ---- Head ---- */
+.head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+  color: var(--text-faint);
+  letter-spacing: var(--tracking-wide);
+}
+
+.eyebrowPrompt {
+  color: var(--accent);
+}
+
+.name {
+  font-size: var(--font-size-display);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--tracking-tighter);
+  color: var(--text);
+}
+
+.nameLine {
+  display: block;
+}
+
+/* ---- Body ---- */
+.body {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: var(--space-7);
+  align-items: start;
+}
+
+.roleLine {
+  display: flex;
   flex-wrap: wrap;
-  min-width: 0;
-  overflow-x: hidden;
-  margin-bottom: var(--section-spacing-block);
+  align-items: baseline;
+  gap: var(--space-3);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
 }
 
-/* ===== PROFILE IMAGE ===== */
-.profileImage {
+.roleLabel {
+  color: var(--text);
+}
+
+.roleDivider {
+  color: var(--text-faint);
+}
+
+.roleFocus {
+  color: var(--accent);
+}
+
+.lead {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-muted);
+  max-width: 52ch;
+}
+
+/* ---- Status pill ---- */
+.status {
+  grid-column: 1 / -1;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) 0;
+  border-top: var(--hairline);
+  border-bottom: var(--hairline);
   width: 100%;
-  max-width: var(--home-image-max-width);
-  height: auto;
-  border-radius: 50%;
-  margin: 0 auto;
-  z-index: var(--z-dropdown);
 }
 
-/* ===== TYPOGRAPHY ===== */
-.title {
-  font-size: var(--font-size-icon-large);
-  font-weight: 600;
-  color: var(--primary-text-color);
+.statusText {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
 }
 
-.subtitle {
-  font-size: var(--font-size-subtitle);
-  font-weight: 400;
-  color: var(--secondary-text-color);
-  margin: 0;
+.statusCompany {
+  color: var(--text);
+  margin-left: var(--space-1);
 }
 
-/* ===== CONTENT CONTAINERS ===== */
-.leftContainer {
-  flex: 1;
-  flex-basis: 50%;
-  min-width: 0;
-}
-
-.rightContainer {
-  flex: 1;
-  flex-basis: 40%;
-  min-width: 0;
-  display: flex;
-  justify-content: center;
-}
-
-/* ===== DESCRIPTION ===== */
-.description {
-  font-size: var(--font-size);
-  line-height: 1.6;
-  margin-top: var(--spacing-md);
-  color: var(--secondary-text-color);
-}
-
-/* ===== TECH STACK ===== */
-.techStackSection {
-  width: 100%;
-  margin-top: var(--spacing-2xl);
-}
-
-.techStackTitle {
-  font-size: var(--font-size-icon-medium);
-  font-weight: var(--font-weight-medium);
-  color: var(--primary-text-color);
-  margin-bottom: var(--spacing-sm);
-  text-align: center;
-}
-
-/* ===== RESPONSIVE ===== */
-@media screen and (max-width: 768px) {
-  .container {
-    flex-direction: column-reverse;
-    align-items: center;
-    gap: var(--spacing-xl);
-    margin-top: var(--spacing-md);
-    margin-bottom: var(--section-spacing-block);
+@media (max-width: 768px) {
+  .body {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
   }
-  
-  .profileImage {
-    display: block;
-    width: 100%;
-    margin-bottom: var(--spacing-md);
-  }
-  
-  .leftContainer, .rightContainer {
-    min-width: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  .lead {
+    font-size: var(--font-size-base);
   }
 }

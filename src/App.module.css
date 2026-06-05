@@ -1,15 +1,38 @@
-.appContainer {
-  min-height: 100vh;
+.container {
+  position: relative;
   width: 100%;
-  /* display: flex;  Eliminado para permitir sticky */
-  flex-direction: column;
-  align-items: center;
+  min-height: 100vh;
+  padding-bottom: var(--space-10);
 }
 
-.mainContent {
+.main {
+  position: relative;
   width: 100%;
-  max-width: var(--layout-max-width);
+  max-width: var(--max-width-wide);
   margin: 0 auto;
-  padding: 0 var(--layout-padding-inline);
-  box-sizing: border-box;
+  padding: 0 var(--inline-padding);
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-gap);
+}
+
+/* Hairline vertical rule that anchors the editorial grid.
+   Sits on the left margin of the main column and runs from
+   top to bottom of the portfolio body. */
+.main::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(var(--inline-padding) - var(--space-3));
+  width: var(--size-rule);
+  background-color: var(--border);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .main::before {
+    display: none;
+  }
 }

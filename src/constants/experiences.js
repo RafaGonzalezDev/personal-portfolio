@@ -6,11 +6,11 @@ export const EXPERIENCES = [
     company: '.es formación y consultoría',
     role: 'Frontend Architect - Banc Sabadell',
     location: 'Madrid, Spain · Remote',
-    description: `Joined the Frontend Architecture team with responsibility for defining and governing the bank's technical frontend ecosystem. Hybrid role combining strategic **architecture design** with hands-on implementation in enterprise environments.
+    description: `Joined the Frontend Architecture team to define and govern the bank's technical frontend ecosystem. Hybrid role pairing **architecture design** with hands-on implementation in production.
 
-Used custom **agentic workflows** with Pi/OpenCode, MCPs and custom extensions to accelerate code analysis, technical documentation, change review and recurring frontend architecture tasks.
+Built **custom agentic tooling** on top of coding agents (Pi/OpenCode), MCP servers and bespoke extensions to automate code analysis, technical documentation, change review and recurring architecture tasks.
 
-Explored **agentic automations** applied to CI/CD workflows, change review and integrations with collaborative tools in enterprise environments.`,
+Applied **agentic automations** to CI/CD, change review and integrations with the team's collaborative toolchain.`,
   },
   {
     start: { month: 9, year: 2025 },
@@ -19,17 +19,11 @@ Explored **agentic automations** applied to CI/CD workflows, change review and i
     company: 'Banco Santander',
     role: 'Frontend Engineer',
     location: 'Madrid, Spain',
-    description: `**End-to-end ownership** of 2 microfrontends: development, maintenance, releases and deployments in a high-availability banking environment with Angular and TypeScript.
+    description: `Owned two microfrontends end-to-end — development, maintenance, releases and deployments — in a high-availability banking environment on Angular and TypeScript.
 
-Designed and implemented a **CLI tool** (Node.js + TypeScript) for end-to-end microfrontend i18n: .xlf → CSV → batch API translation → consolidation → locale generation pipeline.
+Built a **CLI tool** in Node.js + TypeScript that turns the microfrontend i18n pipeline into a single command: .xlf → CSV → batch API translation → consolidation → locale generation. **Cut internationalization time from days to ~10 minutes** and made the workflow adoptable across the team.
 
-**Reduced internationalization effort** from days to minutes (~10 min), enabling faster deliveries and broader adoption across the team.
-
-Implemented **agent-assisted automated testing** with **Playwright MCP** to validate E2E flows and strengthen functional quality.
-
-Applied custom **agentic tooling** to accelerate analysis, documentation, change generation and automation within the frontend development lifecycle.
-
-Provided **1:1 mentoring** to standardize and speed up development processes through MCP workflows and coding agents.`,
+Strengthened E2E quality with **Playwright MCP** to drive agent-assisted automated testing, and shipped **agentic workflows** that accelerated analysis, documentation and change generation across the development lifecycle. Mentored teammates 1:1 on these MCP-based workflows.`,
   },
   {
     start: { month: 11, year: 2023 },
@@ -38,15 +32,11 @@ Provided **1:1 mentoring** to standardize and speed up development processes thr
     company: 'UST Global | Banco Santander',
     role: 'Frontend Engineer',
     location: 'Madrid, Spain · Remote',
-    description: `Led end-to-end development and optimization of an **Angular and TypeScript** microfrontend.
+    description: `Led the development and optimization of an **Angular + TypeScript** microfrontend inside Banco Santander's platform.
 
-Implemented **NgRx** and a custom state management system, improving performance and consistency.
+Designed the **state management layer** (NgRx + a custom store) and the **routing system** that lets microfrontends stay encapsulated through **Module Federation**.
 
-Designed a **custom routing system** for encapsulated microfrontends using **Module Federation**.
-
-Improved microfrontend stability and quality by reinforcing **unit testing** (Jasmine/Karma) to meet **SonarQube** quality gates and Jenkins pipeline validations.
-
-**Onboarded and mentored** a new team member, accelerating technical ramp-up and alignment with project standards.`,
+Hardened delivery with **unit testing** (Jasmine/Karma) tuned to pass **SonarQube** quality gates and Jenkins pipeline validations, and onboarded a new engineer to the project's standards.`,
   },
   {
     start: { month: 3, year: 2023 },
@@ -55,8 +45,6 @@ Improved microfrontend stability and quality by reinforcing **unit testing** (Ja
     company: 'GrayHats',
     role: 'Frontend Developer Intern',
     location: 'Córdoba, Spain · On-site',
-    description: `Designed advanced solutions with **React** and **GraphQL**, optimizing operational efficiency.
-
-Developed backend services with **AWS Amplify**, ensuring secure integration and scalability.`,
+    description: `Built features with **React** and **GraphQL**, and developed backend services on **AWS Amplify** with secure, scalable integrations.`,
   },
 ];

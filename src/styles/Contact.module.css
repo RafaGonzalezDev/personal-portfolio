@@ -1,141 +1,171 @@
-/* ===== MAIN SECTION ===== */
-.contactSection {
-  padding: 0 0 var(--section-spacing-block) 0;
-  margin: 0 auto;
-  max-width: var(--layout-max-width-narrow);
-  width: 100%;
-  color: var(--primary-text-color);
-  background: none;
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-7);
 }
 
-/* ===== TITLE ===== */
-.title {
-  font-size: var(--font-size-title, 2.8rem);
-  text-align: center;
+/* ---- Section header (2 rows: compact top + large title + subtitle) ---- */
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.headerTop {
+  display: grid;
+  grid-template-columns: var(--size-meta-column) minmax(0, 1fr);
+  gap: var(--space-5);
+  align-items: center;
+}
+
+.headerIndex {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-medium);
+  line-height: 1;
+  color: var(--accent);
+  letter-spacing: var(--tracking-tight);
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  color: var(--text-faint);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-widest);
+}
+
+.sectionTitle {
+  font-size: var(--font-size-4xl);
   font-weight: var(--font-weight-bold);
-  color: var(--primary-text-color);
+  line-height: var(--line-height-snug);
+  letter-spacing: var(--tracking-tighter);
+  color: var(--text);
+  max-width: 36ch;
 }
 
-/* ===== INFO TEXT ===== */
-.infoText {
-  font-size: var(--font-size);
-  line-height: 1.6;
-  color: var(--secondary-text-color);
-  text-align: center;
-  max-width: var(--layout-max-width-reading);
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: var(--spacing-2xl);
+.sectionTitleAccent {
+  color: var(--text-muted);
 }
 
-/* ===== SOCIAL MEDIA CONTAINER ===== */
-.contactCardsContainer {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: var(--spacing-3xl);
-  margin: var(--spacing-2xl) auto;
+.subtitle {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-muted);
+  max-width: 48ch;
+  margin: 0;
 }
 
-/* ===== SOCIAL MEDIA ICON ===== */
-.contactCard {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* ---- Method list ---- */
+.list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  border-top: var(--hairline);
+  border-bottom: var(--hairline);
 }
 
-.contactCardLink {
+.item {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  color: var(--secondary-text-color);
-  text-decoration: none;
-  transition: all var(--transition-normal) var(--easing-standard);
+  gap: var(--space-3);
+  padding: var(--space-6) var(--space-5);
+  transition: background-color var(--duration-base) var(--ease);
 }
 
-.contactCardLink:hover {
-  color: var(--accent-color);
-  transform: translateY(-3px);
+.item:nth-child(even) {
+  border-left: var(--hairline);
 }
 
-.contactIcon {
-  font-size: var(--font-size-icon-large);
-  transition: transform var(--transition-normal) var(--easing-standard);
-  margin-bottom: var(--spacing-sm);
+.item:hover {
+  background-color: color-mix(in srgb, var(--bg-subtle) 50%, transparent);
 }
 
-.contactCardLink:hover .contactIcon {
-  transform: scale(1.1);
+.itemLabel {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  color: var(--text-faint);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-widest);
 }
 
-.contactValue {
-  font-size: var(--font-size-text);
-  font-weight: 500;
-  transition: color var(--transition-normal) var(--easing-standard);
+.itemLink {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  color: var(--text);
+  transition: color var(--duration-base) var(--ease);
 }
 
-/* ===== CLOSING MESSAGE ===== */
-.contactMessage {
-  text-align: center;
-  font-size: var(--font-size-role);
-  color: var(--secondary-text-color);
-  margin-top: var(--spacing-2xl);
-  font-style: italic;
+.itemLink:hover {
+  color: var(--accent);
 }
 
-/* ===== ERROR MESSAGES ===== */
-.error {
-  color: var(--error-color);
-  font-size: var(--font-size-text);
-  margin-top: var(--spacing-xs);
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  animation: fadeIn var(--transition-normal) var(--easing-standard);
+.itemValue {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--tracking-tight);
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size var(--duration-slow) var(--ease);
 }
 
-.error::before {
-  content: "⚠️";
-  margin-right: var(--spacing-xs);
-  font-size: var(--font-size-text);
+.itemLink:hover .itemValue {
+  background-size: 100% 1px;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-5px);
+.itemArrow {
+  font-size: var(--font-size-xl);
+  line-height: 1;
+  color: var(--text-faint);
+  transition: color var(--duration-base) var(--ease),
+    transform var(--duration-base) var(--ease);
+}
+
+.itemLink:hover .itemArrow {
+  color: var(--accent);
+  transform: translate(2px, -2px);
+}
+
+/* ---- Closing line ---- */
+.footer {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+  color: var(--text-faint);
+  letter-spacing: var(--tracking-wide);
+  max-width: 52ch;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .headerTop {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  .headerIndex {
+    font-size: var(--font-size-2xl);
   }
-}
-
-/* ===== RESPONSIVE ===== */
-@media screen and (max-width: 768px) {
-  .contactCardsContainer {
-    gap: var(--spacing-2xl);
+  .sectionTitle {
+    font-size: var(--font-size-3xl);
   }
-  
-  .contactIcon {
-    font-size: var(--font-size-icon-tablet);
+  .list {
+    grid-template-columns: 1fr;
   }
-}
-
-@media screen and (max-width: 480px) {
-  .contactCardsContainer {
-    gap: var(--spacing-lg);
+  .item,
+  .item:nth-child(even) {
+    padding: var(--space-5) 0;
+    border-left: 0;
   }
-
-  .contactCard {
-    min-width: 10rem;
+  .item {
+    border-top: var(--hairline);
   }
-  
-  .contactIcon {
-    font-size: var(--font-size-icon-mobile);
+  .item:first-child {
+    border-top: 0;
   }
-  
-  .contactValue {
-    font-size: var(--font-size-icon-small);
+  .itemValue {
+    font-size: var(--font-size-xl);
   }
 }
