@@ -44,13 +44,7 @@ const formatDuration = (start, end) => {
 const formatExperienceDate = (experience) => {
   const startDate = `${getMonthLabel(experience.start.month)} ${experience.start.year}`;
   const endDate = getDisplayEndDate(experience);
-  const duration = formatDuration(experience.start, experience.end);
-  return `${startDate} — ${endDate}  ·  ${duration}`;
-};
-
-const formatMeta = (experience) => {
-  const date = formatExperienceDate(experience);
-  return experience.location ? `${date}  ·  ${experience.location}` : date;
+  return `${startDate} — ${endDate}`;
 };
 
 const formatDescription = (description) => {
@@ -69,8 +63,13 @@ const Experience = () => {
   return (
     <section className={styles.section} id="experience">
       <header className={styles.header}>
-        <h2 className={styles.title}>
-          <span className={styles.titleIndex}>01.</span>Experience
+        <div className={styles.headerTop}>
+          <span className={styles.headerIndex} aria-hidden="true">01</span>
+          <p className={styles.eyebrow}>Experience</p>
+        </div>
+        <h2 className={styles.sectionTitle}>
+          A track record of shipping production frontend
+          <span className={styles.sectionTitleAccent}> at scale.</span>
         </h2>
       </header>
 
@@ -80,16 +79,32 @@ const Experience = () => {
             key={`${experience.company}-${experience.role}-${experience.start.month}-${experience.start.year}`}
             className={styles.item}
           >
-            <div className={styles.head}>
-              <h3 className={styles.company}>{experience.company}</h3>
-              <p className={styles.role}>{experience.role}</p>
-              <p className={styles.meta}>{formatMeta(experience)}</p>
-            </div>
-
-            <div className={styles.body}>
-              <div className={styles.description}>
-                {formatDescription(experience.description)}
+            <header className={styles.itemHead}>
+              <div className={styles.titleLine}>
+                <h3 className={styles.company}>{experience.company}</h3>
+                <p className={styles.role}>{experience.role}</p>
               </div>
+              <div className={styles.metaLine}>
+                <span>{formatExperienceDate(experience)}</span>
+                <span className={styles.metaDot} aria-hidden="true">·</span>
+                <span>{formatDuration(experience.start, experience.end)}</span>
+                {experience.location ? (
+                  <>
+                    <span className={styles.metaDot} aria-hidden="true">·</span>
+                    <span>{experience.location}</span>
+                  </>
+                ) : null}
+                {experience.isCurrent ? (
+                  <span className={styles.badge}>
+                    <span className="status-dot" aria-hidden="true" />
+                    Current
+                  </span>
+                ) : null}
+              </div>
+            </header>
+
+            <div className={styles.itemBody}>
+              {formatDescription(experience.description)}
             </div>
           </li>
         ))}
