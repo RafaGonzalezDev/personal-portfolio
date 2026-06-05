@@ -1,22 +1,61 @@
 .layout {
+  position: relative;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
+/* Full-bleed dot grid that sits behind the page.
+   Lives on the layout root so it covers the entire viewport. */
+.layout::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
+  background-size: 28px 28px;
+  background-position: 0 0;
+  pointer-events: none;
+  z-index: 0;
+  mask-image: radial-gradient(ellipse at 50% 30%, #000 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 30%, #000 30%, transparent 80%);
+}
+
+.layout > * {
+  position: relative;
+  z-index: 1;
+}
+
 .footer {
-  border-top: var(--border-thin);
-  padding: var(--space-6) 0;
-  margin-top: var(--space-9);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  max-width: var(--max-width-wide);
+  margin: var(--space-9) auto 0;
+  padding: var(--space-5) var(--inline-padding) var(--space-6);
+  border-top: var(--hairline);
 }
 
 .footerText {
-  display: block;
-  max-width: var(--max-width-wide);
-  margin: 0 auto;
-  padding: 0 var(--inline-padding);
   font-family: var(--font-mono);
   font-size: var(--font-size-xs);
   color: var(--text-faint);
-  text-align: left;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+}
+
+.footerMeta {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  color: var(--text-faint);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+}
+
+@media (max-width: 480px) {
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
 }
