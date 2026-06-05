@@ -1,22 +1,21 @@
 # Personal Portfolio
 
-A modern personal portfolio built with React and Vite, showcasing professional experience, featured projects and technical skills.
+A minimal personal portfolio built with React and Vite, focused on frontend architecture, production systems and developer tooling.
 
-![Portfolio Preview](./public/preview.png)
+![Portfolio Preview](./public/preview-v2.png)
 
 ## Features
 
-- **Responsive Design**: Optimized for all devices
-- **Smooth Animations**: AOS implementation for fluid transitions
-- **Modular Architecture**: CSS Modules for maintainable code
+- **Responsive Design**: Optimized for desktop and mobile layouts
+- **Editorial UI**: Minimal dark interface with timeline-driven experience
+- **Modular Architecture**: CSS Modules for scoped component styles
 - **Optimized Performance**: Built with Vite
 
 ## Tech Stack
 
 - **Frontend**: React 19, JavaScript ES6+
-- **Bundler**: Vite 6.2
+- **Bundler**: Vite 7
 - **Styling**: CSS Modules
-- **Animations**: AOS (Animate On Scroll)
 - **Linting**: ESLint
 
 ## Project Structure
@@ -72,8 +71,8 @@ npm run lint     # Run ESLint
 
 ## Portfolio Sections
 
-- **Home**: Personal introduction and main technologies
-- **Experience**: Professional history
+- **Home**: Personal introduction, profile image and core capabilities
+- **Experience**: Professional timeline
 - **Projects**: Featured projects with GitHub links and demos
 - **Contact**: Contact information and social networks
 

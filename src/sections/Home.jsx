@@ -22,10 +22,10 @@ const Home = () => {
         </p>
 
         <div className={styles.identity}>
-          <div
+          <img
             className={styles.profilePhoto}
-            role="img"
-            aria-label={`Profile photo placeholder for ${PROFESSIONAL_SUMMARY.name}`}
+            src="/profile-picture.jpg"
+            alt={PROFESSIONAL_SUMMARY.name}
           />
           <div className={styles.identityText}>
             <p className={styles.name}>{PROFESSIONAL_SUMMARY.name}</p>
