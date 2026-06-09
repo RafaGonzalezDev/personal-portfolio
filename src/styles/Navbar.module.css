@@ -39,15 +39,6 @@
   transition: color var(--duration-base) var(--ease);
 }
 
-.linkIndex {
-  font-family: var(--font-mono);
-  font-size: var(--font-size-xs);
-  font-variant-numeric: tabular-nums;
-  letter-spacing: var(--tracking-wide);
-  color: var(--text-faint);
-  transition: color var(--duration-base) var(--ease);
-}
-
 .linkLabel {
   font-family: var(--font-sans);
   font-size: var(--font-size-sm);
@@ -60,11 +51,6 @@
 .link:hover .linkLabel,
 .linkActive .linkLabel {
   color: var(--text);
-}
-
-.link:hover .linkIndex,
-.linkActive .linkIndex {
-  color: var(--accent);
 }
 
 .linkActive {
@@ -90,8 +76,5 @@
     gap: var(--space-4);
     width: 100%;
     justify-content: space-between;
-  }
-  .linkIndex {
-    display: none;
   }
 }

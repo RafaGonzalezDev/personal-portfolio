@@ -2,8 +2,6 @@ import { useState, useEffect, useRef } from 'react';
 import styles from '@/styles/Navbar.module.css';
 import { NAVBAR_ITEMS } from '@/constants';
 
-const formatIndex = (index) => String(index + 1).padStart(2, '0');
-
 const Navbar = () => {
   const [activeItem, setActiveItem] = useState(NAVBAR_ITEMS[0]?.id ?? 'home');
   const sectionRefs = useRef({});
@@ -12,7 +10,7 @@ const Navbar = () => {
     NAVBAR_ITEMS.forEach((item) => {
       sectionRefs.current[item.id] = document.getElementById(item.id);
     });
-  }, [NAVBAR_ITEMS]);
+  }, []);
 
   useEffect(() => {
     const sectionElements = NAVBAR_ITEMS
@@ -88,11 +86,12 @@ const Navbar = () => {
     setActiveItem(id);
     if (id === 'home') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else {
-      const section = sectionRefs.current[id];
-      if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
-      }
+      return;
+    }
+
+    const section = sectionRefs.current[id];
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -100,7 +99,7 @@ const Navbar = () => {
     <nav className={styles.nav} aria-label="Primary">
       <div className={styles.inner}>
         <ul className={styles.list}>
-          {NAVBAR_ITEMS.map((item, index) => (
+          {NAVBAR_ITEMS.map((item) => (
             <li key={item.id} className={styles.item}>
               <a
                 href={`#${item.id}`}
@@ -113,7 +112,6 @@ const Navbar = () => {
                 }}
                 aria-current={activeItem === item.id ? 'true' : undefined}
               >
-                <span className={styles.linkIndex}>{formatIndex(index)}</span>
                 <span className={styles.linkLabel}>{item.label}</span>
               </a>
             </li>
