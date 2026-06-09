@@ -89,10 +89,8 @@
 .metaLine {
   display: flex;
   flex-direction: column;
-  gap: var(--space-3);
+  gap: var(--space-2);
   padding: var(--space-4) 0;
-  border-top: var(--hairline);
-  border-bottom: var(--hairline);
 }
 
 .roleLine {
@@ -101,13 +99,14 @@
   align-items: baseline;
   gap: var(--space-3);
   font-family: var(--font-mono);
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
   letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
 }
 
 .roleLabel {
-  color: var(--text);
+  color: var(--text-muted);
 }
 
 .roleDivider {
@@ -115,7 +114,7 @@
 }
 
 .roleFocus {
-  color: var(--accent);
+  color: var(--text-muted);
 }
 
 .status {
@@ -125,26 +124,41 @@
   min-width: 0;
 }
 
-.status :global(.status-dot) {
+.statusText :global(.status-dot) {
+  margin-left: var(--space-2);
   transform: translateY(-0.08em);
 }
 
 .statusText {
   min-width: 0;
   font-family: var(--font-mono);
-  font-size: var(--font-size-xs);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
   color: var(--text-muted);
   letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
 }
 
+.statusPrefix {
+  color: var(--text-faint);
+}
+
+.statusRole,
 .statusCompany {
   color: var(--text);
-  margin-left: var(--space-1);
+}
+
+.statusSeparator {
+  margin: 0 var(--space-1);
+  color: var(--accent);
+}
+
+.statusProject {
+  color: var(--accent);
 }
 
 .lead {
-  max-width: 60ch;
+  max-width: 68ch;
   font-size: var(--font-size-lg);
   line-height: var(--line-height-relaxed);
   color: var(--text-muted);
@@ -188,14 +202,6 @@
   .profilePhoto {
     width: 2.75rem;
     height: 2.75rem;
-  }
-  .roleLine {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--space-1);
-  }
-  .roleDivider {
-    display: none;
   }
   .lead {
     font-size: var(--font-size-base);

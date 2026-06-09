@@ -12,6 +12,7 @@ const CORE_CAPABILITIES = [
 
 const Home = () => {
   const currentExperience = EXPERIENCES.find((experience) => experience.isCurrent);
+  const [currentRole, currentProject] = currentExperience?.role.split(' - ') ?? [];
 
   return (
     <section className={styles.section} id="home">
@@ -40,6 +41,28 @@ const Home = () => {
 
       <div className={styles.body}>
         <div className={styles.metaLine} aria-label="Professional profile">
+          {currentExperience ? (
+            <div className={styles.status}>
+              <span className={styles.statusText}>
+                <span className={styles.statusPrefix}>Currently</span>{' '}
+                <span className={styles.statusRole}>{currentRole?.toLowerCase()}</span>
+                {currentProject ? (
+                  <>
+                    <span className={styles.statusSeparator} aria-hidden="true">
+                      ·
+                    </span>
+                    <span className={styles.statusProject}>{currentProject}</span>
+                  </>
+                ) : null}{' '}
+                <span className={styles.statusPrefix}>at</span>{' '}
+                <span className={styles.statusCompany}>
+                  {currentExperience.company}
+                </span>
+                <span className="status-dot" aria-hidden="true" />
+              </span>
+            </div>
+          ) : null}
+
           <div className={styles.roleLine}>
             <span className={styles.roleLabel}>
               {PROFESSIONAL_SUMMARY.title}
@@ -53,18 +76,6 @@ const Home = () => {
             </span>
             <span className={styles.roleFocus}>Developer Tooling</span>
           </div>
-
-          {currentExperience ? (
-            <div className={styles.status}>
-              <span className="status-dot" aria-hidden="true" />
-              <span className={styles.statusText}>
-                Currently {currentExperience.role.toLowerCase()} at{' '}
-                <span className={styles.statusCompany}>
-                  {currentExperience.company}
-                </span>
-              </span>
-            </div>
-          ) : null}
         </div>
 
         <p className={styles.lead}>
