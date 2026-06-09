@@ -3,7 +3,7 @@ export const PROJECTS = [
   {
     id: 1,
     title: 'stride-agent-showcase',
-    description: 'TypeScript/Node.js coding-agent runtime with policy-gated tools, allow/ask/deny permissions, audit logging, secret redaction, fake/OpenAI-compatible providers and plugin loading.',
+    description: 'TypeScript/Node.js coding-agent runtime with **policy-gated tools**, allow/ask/deny permissions, audit logging, **secret redaction**, fake/OpenAI-compatible providers and plugin loading.',
     technologies: ['TypeScript', 'MCP', 'OpenAI API'],
     image: '',
     githubUrl: 'https://github.com/RafaGonzalezDev/stride-agent-showcase',
@@ -21,7 +21,7 @@ export const PROJECTS = [
   {
     id: 2,
     title: 'angular-i18n-translator',
-    description: 'Node.js CLI for automating Angular XLF i18n with LLMs, batch processing, interpolation preservation, placeholder validation and multi-provider support.',
+    description: 'Node.js CLI for automating **Angular XLF i18n** with LLMs, batch processing, **interpolation preservation**, placeholder validation and multi-provider support.',
     technologies: ['TypeScript', 'Angular', 'LLM APIs'],
     image: '',
     githubUrl: 'https://github.com/RafaGonzalezDev/angular-i18n-translator',
@@ -39,7 +39,7 @@ export const PROJECTS = [
   {
     id: 3,
     title: 'mcp-schema-runner',
-    description: 'Local developer tool for debugging stdio MCP servers with tool schema inspection, manual tool calls, raw request/response/error traces and OpenCode + Hermes config normalization.',
+    description: 'Local developer tool for debugging **stdio MCP servers** with tool schema inspection, manual tool calls, **raw request/response/error traces** and OpenCode + Hermes config normalization.',
     technologies: ['TypeScript', 'MCP', 'React'],
     image: '',
     githubUrl: 'https://github.com/RafaGonzalezDev/mcp-schema-runner',
@@ -57,7 +57,7 @@ export const PROJECTS = [
   {
     id: 4,
     title: 'agentic-pr-reviewer-action',
-    description: 'Agentic GitHub Action for diff-scoped Pull Request reviews using OpenAI-compatible LLM endpoints, focused on CI/CD automation and actionable code-review feedback.',
+    description: 'Agentic GitHub Action for **diff-scoped Pull Request reviews** using OpenAI-compatible LLM endpoints, focused on **CI/CD automation** and actionable code-review feedback.',
     technologies: ['GitHub Actions', 'Node.js', 'LLM APIs'],
     image: '',
     githubUrl: 'https://github.com/RafaGonzalezDev/agentic-pr-reviewer-action',
@@ -75,7 +75,7 @@ export const PROJECTS = [
   {
     id: 5,
     title: 'dotfiles-opencode-showcase',
-    description: 'Role/team-based OpenCode profile installer with a TypeScript/Ink CLI, agentic workflows, transactional backups/rollback and managed configuration verification.',
+    description: 'Role/team-based OpenCode profile installer with a **TypeScript/Ink CLI**, agentic workflows, **transactional backups/rollback** and managed configuration verification.',
     technologies: ['TypeScript', 'Ink', 'Bash'],
     image: '',
     githubUrl: 'https://github.com/RafaGonzalezDev/dotfiles-opencode-showcase',
@@ -93,7 +93,7 @@ export const PROJECTS = [
   {
     id: 6,
     title: 'dotfiles-pi-showcase',
-    description: 'Lightweight Pi extension showcase with MCP tool loading, exact-URL web fetch, policy-based security guardrails and compact renderers for coding-agent workflows.',
+    description: 'Lightweight Pi extension showcase with **MCP tool loading**, exact-URL web fetch, **policy-based security guardrails** and compact renderers for coding-agent workflows.',
     technologies: ['TypeScript', 'MCP', 'Node.js'],
     image: '',
     githubUrl: 'https://github.com/RafaGonzalezDev/dotfiles-pi-showcase',

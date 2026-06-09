@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from '@/styles/Projects.module.css';
 import { PROJECTS } from '@/constants';
+import { parseHighlight } from '@/utils';
 
 const ProjectCard = React.memo(({ project }) => {
   return (
@@ -42,7 +43,7 @@ const ProjectCard = React.memo(({ project }) => {
         </p>
       </header>
 
-      <p className={styles.cardDescription}>{project.description}</p>
+      <p className={styles.cardDescription}>{parseHighlight(project.description)}</p>
 
       <ul className={styles.cardTags}>
         {project.technologies.map((tech, techIndex) => (
