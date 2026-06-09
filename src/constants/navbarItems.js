@@ -13,6 +13,10 @@ export const NAVBAR_ITEMS = [
     label: 'Projects',
   },
   {
+    id: 'tech-stack',
+    label: 'Tech Stack',
+  },
+  {
     id: 'contact',
     label: 'Contact',
   },

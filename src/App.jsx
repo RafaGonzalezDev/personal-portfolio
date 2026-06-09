@@ -5,6 +5,7 @@ import MainLayout from '@/layouts/MainLayout';
 import Home from '@/sections/Home';
 import Experience from '@/sections/Experience';
 import Projects from '@/sections/Projects';
+import TechStack from '@/sections/TechStack';
 import Contact from '@/sections/Contact';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Home />
           <Experience />
           <Projects />
+          <TechStack />
           <Contact />
         </main>
       </div>

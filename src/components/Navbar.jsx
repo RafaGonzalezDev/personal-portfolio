@@ -12,7 +12,7 @@ const Navbar = () => {
     NAVBAR_ITEMS.forEach((item) => {
       sectionRefs.current[item.id] = document.getElementById(item.id);
     });
-  }, []);
+  }, [NAVBAR_ITEMS]);
 
   useEffect(() => {
     const sectionElements = NAVBAR_ITEMS
