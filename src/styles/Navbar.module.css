@@ -53,12 +53,20 @@
 
 .commandText {
   color: inherit;
-  transition: color var(--duration-base) var(--ease);
+  margin-bottom: calc(-1 * var(--space-1));
+  padding-bottom: var(--space-1);
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: color var(--duration-base) var(--ease),
+    background-size var(--duration-slow) var(--ease);
 }
 
 .link:hover .commandText,
 .linkActive .commandText {
   color: var(--text);
+  background-size: 100% 1px;
 }
 
 .linkIndex {
@@ -76,12 +84,20 @@
   font-weight: var(--font-weight-medium);
   letter-spacing: var(--tracking-snug);
   color: inherit;
-  transition: color var(--duration-base) var(--ease);
+  margin-bottom: calc(-1 * var(--space-1));
+  padding-bottom: var(--space-1);
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: color var(--duration-base) var(--ease),
+    background-size var(--duration-slow) var(--ease);
 }
 
 .link:hover .linkLabel,
 .linkActive .linkLabel {
   color: var(--text);
+  background-size: 100% 1px;
 }
 
 .link:hover .linkIndex,
@@ -91,16 +107,6 @@
 
 .linkActive {
   color: var(--text);
-}
-
-.linkActive::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: calc(-1 * var(--space-1));
-  height: 1px;
-  background-color: var(--accent);
 }
 
 @media (max-width: 640px) {
