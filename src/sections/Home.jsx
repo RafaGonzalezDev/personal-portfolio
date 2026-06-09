@@ -17,11 +17,6 @@ const Home = () => {
   return (
     <section className={styles.section} id="home">
       <div className={styles.head}>
-        <p className={styles.eyebrow}>
-          <span className={styles.eyebrowPrompt}>$</span>
-          <span>whoami</span>
-        </p>
-
         <div className={styles.identity}>
           <img
             className={styles.profilePhoto}
