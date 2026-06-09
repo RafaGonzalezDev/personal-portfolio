@@ -2,6 +2,8 @@ import { useState, useEffect, useRef } from 'react';
 import styles from '@/styles/Navbar.module.css';
 import { NAVBAR_ITEMS } from '@/constants';
 
+const formatIndex = (index) => String(index + 1).padStart(2, '0');
+
 const Navbar = () => {
   const [activeItem, setActiveItem] = useState(NAVBAR_ITEMS[0]?.id ?? 'home');
   const sectionRefs = useRef({});
@@ -95,11 +97,31 @@ const Navbar = () => {
     }
   };
 
+  const homeItem = NAVBAR_ITEMS.find((item) => item.id === 'home');
+  const sectionItems = NAVBAR_ITEMS.filter((item) => item.isNumbered);
+
   return (
     <nav className={styles.nav} aria-label="Primary">
       <div className={styles.inner}>
+        {homeItem ? (
+          <a
+            href={`#${homeItem.id}`}
+            className={`${styles.link} ${styles.commandLink} ${
+              activeItem === homeItem.id ? styles.linkActive : ''
+            }`}
+            onClick={(e) => {
+              e.preventDefault();
+              handleClick(homeItem.id);
+            }}
+            aria-current={activeItem === homeItem.id ? 'true' : undefined}
+          >
+            <span className={styles.commandPrompt}>$</span>
+            <span className={styles.commandText}>{homeItem.label}</span>
+          </a>
+        ) : null}
+
         <ul className={styles.list}>
-          {NAVBAR_ITEMS.map((item) => (
+          {sectionItems.map((item, index) => (
             <li key={item.id} className={styles.item}>
               <a
                 href={`#${item.id}`}
@@ -112,6 +134,7 @@ const Navbar = () => {
                 }}
                 aria-current={activeItem === item.id ? 'true' : undefined}
               >
+                <span className={styles.linkIndex}>{formatIndex(index)}</span>
                 <span className={styles.linkLabel}>{item.label}</span>
               </a>
             </li>
