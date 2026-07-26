@@ -7,6 +7,7 @@
   justify-content: center;
   width: var(--size-control-sm);
   height: var(--size-control-sm);
+  padding: var(--space-2);
   border-radius: var(--radius-pill);
   background-color: var(--bg-elevated);
   border: var(--hairline);
