@@ -1,0 +1,19 @@
+/* ============================================================
+   THEME — LIGHT EDITORIAL
+   ============================================================ */
+[data-theme="light"] {
+  --bg: #faf9f7;
+  --bg-elevated: #f5f4ef;
+  --bg-subtle: #e8e5df;
+  --text: #1c1917;
+  --text-muted: #78726e;
+  --text-faint: #a39f95;
+  --border: #e8e5df;
+  --border-strong: #d4d0cc;
+  --accent: #5a7a3d;
+  --accent-soft: rgba(90, 122, 61, 0.10);
+  --accent-fg: #faf9f7;
+  --highlight: #faf9f7;
+  --pulse: rgba(90, 122, 61, 0.65);
+  --dot-color: rgba(28, 25, 23, 0.06);
+}
