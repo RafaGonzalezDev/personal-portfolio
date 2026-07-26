@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import styles from '@/styles/Navbar.module.css';
 import { NAVBAR_ITEMS } from '@/constants';
+import ThemeToggle from '@/components/ThemeToggle';
 
 const formatIndex = (index) => String(index + 1).padStart(2, '0');
 
