@@ -233,6 +233,27 @@ strong {
 }
 
 /* ============================================================
+   THEME — LIGHT
+   ============================================================ */
+[data-theme="light"] {
+  --bg: #f5f5f3;
+  --bg-elevated: #e8e8e6;
+  --bg-subtle: #f0f0ef;
+  --text: #1c1c1e;
+  --text-muted: #6b6962;
+  --text-faint: #9b9990;
+  --border: #d4d3ce;
+  --border-strong: #c4c3be;
+  --accent: #2e7d32;
+  --accent-soft: rgba(46, 125, 50, 0.08);
+  --accent-fg: #f5f5f3;
+  --highlight: #f5f5f3;
+  --pulse: rgba(46, 125, 50, 0.65);
+  --dot-color: rgba(0, 0, 0, 0.06);
+  --grid-line-color: rgba(0, 0, 0, 0.04);
+}
+
+/* ============================================================
    RESPONSIVE TOKENS
    ============================================================ */
 @media (max-width: 768px) {

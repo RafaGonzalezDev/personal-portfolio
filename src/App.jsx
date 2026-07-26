@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import styles from '@/App.module.css';
+import { ThemeProvider } from '@/context/ThemeContext';
 
 import MainLayout from '@/layouts/MainLayout';
 import Home from '@/sections/Home';
@@ -16,16 +17,18 @@ function App() {
   }, []);
 
   return (
-    <MainLayout>
-      <div className={styles.container}>
-        <main className={styles.main}>
-          <Home />
-          <Experience />
-          <Projects />
-          <Contact />
-        </main>
-      </div>
-    </MainLayout>
+    <ThemeProvider>
+      <MainLayout>
+        <div className={styles.container}>
+          <main className={styles.main}>
+            <Home />
+            <Experience />
+            <Projects />
+            <Contact />
+          </main>
+        </div>
+      </MainLayout>
+    </ThemeProvider>
   );
 }
 

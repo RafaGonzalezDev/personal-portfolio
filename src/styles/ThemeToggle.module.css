@@ -1,0 +1,29 @@
+.toggle {
+  position: fixed;
+  bottom: var(--space-6);
+  right: var(--space-6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--size-control-sm);
+  height: var(--size-control-sm);
+  border-radius: var(--radius-pill);
+  background-color: var(--bg-elevated);
+  border: var(--hairline);
+  color: var(--text);
+  cursor: pointer;
+  transition:
+    background-color var(--duration-base) var(--ease),
+    color var(--duration-base) var(--ease),
+    transform var(--duration-fast) var(--ease-out);
+  z-index: var(--z-nav);
+}
+
+.toggle:hover {
+  background-color: var(--bg-subtle);
+  transform: scale(1.05);
+}
+
+.toggle:active {
+  transform: scale(0.95);
+}
