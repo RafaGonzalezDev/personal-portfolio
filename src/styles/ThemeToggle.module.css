@@ -1,0 +1,38 @@
+.toggle {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--radius-md);
+  
+  background: transparent;
+  border: transparent;
+  color: var(--text-faint);
+  transition: all var(--duration-fast) var(--ease);
+  cursor: pointer;
+}
+
+.toggle:hover {
+  color: var(--accent);
+  transform: rotate(15deg);
+}
+
+.icon {
+  transition: transform 0.3s ease;
+}
+
+.toggle:hover .icon {
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .toggle {
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+}
