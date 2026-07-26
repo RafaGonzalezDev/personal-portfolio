@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { Moon, Sun } from 'lucide-react';
 import styles from '@/styles/ThemeToggle.module.css';
 
