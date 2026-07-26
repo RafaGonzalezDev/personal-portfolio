@@ -214,9 +214,10 @@ strong {
 }
 
 /* ============================================================
+/* ============================================================
    THEME — DARK EDITORIAL
    ============================================================ */
-:root {
+[data-theme="dark"] {
   --bg: #0c0c0d;
   --bg-elevated: #131314;
   --bg-subtle: #181819;
@@ -230,6 +231,27 @@ strong {
   --accent-fg: #0c0c0d;
   --highlight: #f2efe8;
   --pulse: rgba(197, 224, 99, 0.65);
+  --dot-color: rgba(255, 255, 255, 0.06);
+}
+
+/* ============================================================
+   THEME — LIGHT EDITORIAL
+   ============================================================ */
+[data-theme="light"] {
+  --bg: #faf9f7;
+  --bg-elevated: #f5f4ef;
+  --bg-subtle: #e8e5df;
+  --text: #1c1917;
+  --text-muted: #78726e;
+  --text-faint: #a39f95;
+  --border: #e8e5df;
+  --border-strong: #d4d0cc;
+  --accent: #5a7a3d;
+  --accent-soft: rgba(90, 122, 61, 0.10);
+  --accent-fg: #faf9f7;
+  --highlight: #faf9f7;
+  --pulse: rgba(90, 122, 61, 0.65);
+  --dot-color: rgba(28, 25, 23, 0.06);
 }
 
 /* ============================================================
