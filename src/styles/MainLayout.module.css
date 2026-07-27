@@ -25,6 +25,12 @@
   z-index: 1;
 }
 
+/* FAB es fixed y debe ignorar el z-index heredado */
+.layout .theme-fab {
+  position: fixed !important;
+  z-index: 300 !important;
+}
+
 .footer {
   display: flex;
   align-items: center;

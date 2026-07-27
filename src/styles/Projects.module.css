@@ -68,7 +68,7 @@
 }
 
 .card:hover {
-  background-color: color-mix(in srgb, var(--bg-subtle) 50%, transparent);
+  background-color: var(--bg-subtle);
 }
 
 .card:nth-child(even) {

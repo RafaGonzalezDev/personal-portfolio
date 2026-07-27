@@ -78,7 +78,7 @@ strong {
 }
 
 ::selection {
-  background-color: var(--accent);
+  background-color: var(--highlight);
   color: var(--accent-fg);
 }
 
@@ -230,6 +230,27 @@ strong {
   --accent-fg: #0c0c0d;
   --highlight: #f2efe8;
   --pulse: rgba(197, 224, 99, 0.65);
+}
+
+/* ============================================================
+   THEME — LIGHT EDITORIAL
+   ============================================================ */
+[data-theme="light"] {
+  --bg: #f5f4f2;
+  --bg-elevated: #eae9e6;
+  --bg-subtle: #e2e0db;
+  --text: #141414;
+  --text-muted: #6b6b6b;
+  --text-faint: #9e9e9e;
+  --border: #d1d0cc;
+  --border-strong: #b8b6ae;
+  --accent: #5c7a2e;
+  --accent-soft: rgba(92, 122, 46, 0.08);
+  --accent-fg: #f5f4f2;
+  --highlight: #5c7a2e;
+  --pulse: rgba(92, 122, 46, 0.5);
+  --grid-line-color: rgba(0, 0, 0, 0.12);
+  --dot-color: rgba(0, 0, 0, 0.18);
 }
 
 /* ============================================================
