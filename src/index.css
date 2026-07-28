@@ -211,12 +211,8 @@ strong {
   /* ---- Surface textures ---- */
   --grid-line-color: rgba(255, 255, 255, 0.04);
   --dot-color: rgba(255, 255, 255, 0.06);
-}
 
-/* ============================================================
-   THEME — DARK EDITORIAL
-   ============================================================ */
-:root {
+  /* ---- Dark Theme Colors (Default) ---- */
   --bg: #0c0c0d;
   --bg-elevated: #131314;
   --bg-subtle: #181819;
@@ -235,27 +231,45 @@ strong {
 /* ============================================================
    THEME — LIGHT EDITORIAL
    ============================================================ */
-[data-theme="light"] {
-  --bg: #f5f4f2;
-  --bg-elevated: #eae9e6;
-  --bg-subtle: #e2e0db;
-  --text: #141414;
-  --text-muted: #6b6b6b;
-  --text-faint: #9e9e9e;
-  --border: #d1d0cc;
-  --border-strong: #b8b6ae;
-  --accent: #5c7a2e;
-  --accent-soft: rgba(92, 122, 46, 0.08);
-  --accent-fg: #f5f4f2;
-  --highlight: #5c7a2e;
-  --pulse: rgba(92, 122, 46, 0.5);
-  --grid-line-color: rgba(0, 0, 0, 0.12);
-  --dot-color: rgba(0, 0, 0, 0.18);
+.light-theme {
+  --bg: #fdfcf8;
+  --bg-elevated: #ffffff;
+  --bg-subtle: #f5f4ef;
+  --text: #1a1a1a;
+  --text-muted: #57564f;
+  --text-faint: #8e8d86;
+  --border: #e0ddd5;
+  --border-strong: #d1cec4;
+  --accent: #a3b13a;
+  --accent-soft: rgba(163, 177, 58, 0.15);
+  --accent-fg: #ffffff;
+  --highlight: #1a1a1a;
+  --pulse: rgba(163, 177, 58, 0.5);
+  
+  /* Surface textures for light mode */
+  --grid-line-color: rgba(0, 0, 0, 0.04);
+  --dot-color: rgba(0, 0, 0, 0.06);
 }
-
-/* ============================================================
-   RESPONSIVE TOKENS
    ============================================================ */
+.light-theme {
+  --bg: #fdfcf8;
+  --bg-elevated: #ffffff;
+  --bg-subtle: #f5f4ef;
+  --text: #1a1a1a;
+  --text-muted: #57564f;
+  --text-faint: #8e8d86;
+  --border: #e0ddd5;
+  --border-strong: #d1cec4;
+  --accent: #a3b13a;
+  --accent-soft: rgba(163, 177, 58, 0.15);
+  --accent-fg: #ffffff;
+  --highlight: #1a1a1a;
+  --pulse: rgba(163, 177, 58, 0.5);
+  
+  /* Surface textures for light mode */
+  --grid-line-color: rgba(0, 0, 0, 0.04);
+  --dot-color: rgba(0, 0, 0, 0.06);
+}
 @media (max-width: 768px) {
   :root {
     --font-size-3xl: 1.625rem;
