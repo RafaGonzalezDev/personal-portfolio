@@ -6,6 +6,7 @@ import Home from '@/sections/Home';
 import Experience from '@/sections/Experience';
 import Projects from '@/sections/Projects';
 import Contact from '@/sections/Contact';
+import ThemeToggle from '@/components/ThemeToggle';
 
 function App() {
   useEffect(() => {
@@ -16,16 +17,19 @@ function App() {
   }, []);
 
   return (
-    <MainLayout>
-      <div className={styles.container}>
-        <main className={styles.main}>
-          <Home />
-          <Experience />
-          <Projects />
-          <Contact />
-        </main>
-      </div>
-    </MainLayout>
+    <>
+      <MainLayout>
+        <div className={styles.container}>
+          <main className={styles.main}>
+            <Home />
+            <Experience />
+            <Projects />
+            <Contact />
+          </main>
+        </div>
+      </MainLayout>
+      <ThemeToggle />
+    </>
   );
 }
 

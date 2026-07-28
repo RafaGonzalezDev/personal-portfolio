@@ -1,0 +1,30 @@
+.themeFab {
+  position: fixed;
+  bottom: var(--space-5);
+  right: var(--space-5);
+  width: 48px;
+  height: 48px;
+  border: var(--hairline);
+  border-radius: var(--radius-lg);
+  background-color: color-mix(in srgb, var(--bg) 85%, transparent);
+  backdrop-filter: var(--backdrop-nav);
+  -webkit-backdrop-filter: var(--backdrop-nav);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 300;
+  transition: all var(--duration-base) var(--ease);
+  color: var(--text);
+  box-sizing: border-box;
+}
+
+.themeFab:hover {
+  background-color: var(--accent-soft);
+  transform: scale(1.05);
+}
+
+.themeFab:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
