@@ -250,26 +250,7 @@ strong {
   --grid-line-color: rgba(0, 0, 0, 0.04);
   --dot-color: rgba(0, 0, 0, 0.06);
 }
-   ============================================================ */
-.light-theme {
-  --bg: #fdfcf8;
-  --bg-elevated: #ffffff;
-  --bg-subtle: #f5f4ef;
-  --text: #1a1a1a;
-  --text-muted: #57564f;
-  --text-faint: #8e8d86;
-  --border: #e0ddd5;
-  --border-strong: #d1cec4;
-  --accent: #a3b13a;
-  --accent-soft: rgba(163, 177, 58, 0.15);
-  --accent-fg: #ffffff;
-  --highlight: #1a1a1a;
-  --pulse: rgba(163, 177, 58, 0.5);
-  
-  /* Surface textures for light mode */
-  --grid-line-color: rgba(0, 0, 0, 0.04);
-  --dot-color: rgba(0, 0, 0, 0.06);
-}
+
 @media (max-width: 768px) {
   :root {
     --font-size-3xl: 1.625rem;

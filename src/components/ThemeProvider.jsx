@@ -10,7 +10,7 @@ export const ThemeProvider = ({ children }) => {
   });
 
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme);
+    document.documentElement.classList.toggle('light-theme', theme === 'light');
     localStorage.setItem('portfolio-theme', theme);
   }, [theme]);
 
